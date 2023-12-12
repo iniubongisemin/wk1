@@ -36,6 +36,7 @@ name1 = "Utom"
 student_name = input("what is your name? ")
 student_email = input("what is your email address? ")
 student_age = input("how old are you? ")
+student_position = input("what position did you take last term?")
 print(student_name)
 print(student_email)
 print(student_age)
