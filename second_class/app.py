@@ -82,15 +82,15 @@ message = "welcome to python for beginners"
 # print(message[1:5])
 school = "univelcity"   
 bootcamp = "welcome to univelcity"         
-# print(school[0])
-# print(school[0:6])  
-# print(school[3:])
-# print(school[-1])
-# print(bootcamp[-3:])
-# print(school[::-3])
-# print(bootcamp[3:])
-# print(len(school))
-# print(len(bootcamp))
+print(school[0])
+print(school[0:6])  
+print(school[3:])
+print(school[-1])
+print(bootcamp[-3:])
+print(school[::-3])
+print(bootcamp[3:])
+print(len(school))
+print(len(bootcamp))
 
 j = "hello"
 k = "python"
