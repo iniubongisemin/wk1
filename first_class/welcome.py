@@ -15,21 +15,22 @@ name1 = "Utom"
 # Set: set, frozenset
 # None: NoneType
 
-# print(type(22))
-# print(type(True))
-# print(type(None))
+print(type(22))
+print(type(True))
+print(type(None))
 
 # You can store datatypes in variables e.g
-# is_student = True
-# print(type(is_student))
+is_student = True
+print(type(is_student))
+i_am_number_four = 4
 
 # container data type
-# tuple_sam = () 
-# diction = {} 
-# sample_list = []
-# print(type(tuple_sam))
-# print(type(diction))
-# print(type(sample_list))
+tuple_sam = () 
+diction = {} 
+sample_list = []
+print(type(tuple_sam))
+print(type(diction))
+print(type(sample_list))
 
 # functions 
 # program to request input from users 
@@ -42,7 +43,7 @@ print(student_email)
 print(student_age)
 
 # string formatting using f - string 
-# print(f"{student_name} - {student_email} - {student_age}")
+print(f"{student_name} - {student_email} - {student_age}")
 
 # converting input to specific data types 
 test_val = "20"

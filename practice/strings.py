@@ -5,19 +5,19 @@
 
 # assigning string to a variable 
 s = 'string'
-# print(s)
+print(s)
 
 # multiline strings
 # use three (double or single) quotes
 lorem = '''lorem ipsum dolor sit amet'''
-# print(lorem)
+print(lorem)
 
 prodev = """i \nlove \ncoding"""  # \n is used as a line break
-# print(prodev)
+print(prodev)
 
 # NB: strings are arrays of bytes representing unicode characters
 first_line_of_code = 'hello world'
-# print(first_line_of_code)
+print(first_line_of_code)
 
 # looping through a string
 # since strings are arrays, we can loop through the characters in a string with a for loop
@@ -37,7 +37,7 @@ print('free' in txt)
 # using "in" in an if statement
 if 'free' in txt:
     print('yes! free is present in text.')
-    pass
+    pass #??
 
 # check if NOT using "not in"
 # to check if a certain phrase is NOT present in a string, use the keyword "not in"
@@ -63,7 +63,7 @@ print(code[5:])
 
 # slice to the end: by leaving out the end index, the range automatically goes to the end;
 # e.g get the characters from position 2 all the way to the end
-# print(code[2:])
+print(code[2:])
 
 # negative indexing: used to start the slice from the end of the string;
 # e.g get the characters "O" in "WORLD!" (position -5) to, but not included: "D" in "world" (position -2)
@@ -89,7 +89,6 @@ print(code.replace('L', 'S'))
 
 if 'l' in code:
     print('yes l is present in code')
-
 else:
     print('oops l is not present in code')
 
@@ -108,24 +107,25 @@ school = 'UNIVELCITY'
 print(school.casefold())
 
 #3. center() - returns a centred string 
-lifeQuoute = 'with God, nothing is impossible'
+lifeQuote = 'with God, nothing is impossible'
 
 #4. count() - returns the number of times a specified value occurs in a string
-print(lifeQuoute.count('s'))
+print(lifeQuote.count('s'))
 
 #5. encode() - returns an encoded version of the string
-print(lifeQuoute.encode)
+print(lifeQuote.encode)
 
 #6. endswith() - return True if the string ends with the specified value
-
+print(lifeQuote.endswith('s'))
 
 #7. expandtabs() - sets the tab size of the string
-
+print(lifeQuote.expandtabs(10))
 
 #8. find() - searches the string for a specified value and returns the position of where it was found
-
+print(lifeQuote.find('impossible'))
 
 #9. format() - formats specified values in a string 
+lifeQuote = "With {}, nothing shall be {}!".format("God", "Impossible")
 
 
 #10. format_map() - formats specified values in a string
