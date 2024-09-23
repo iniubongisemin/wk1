@@ -13,30 +13,29 @@ str()
 # print(int(32.88)) # = 32
 
 """
-3. Write a Python program to display the current date and time.
-Sample Output :
-Current date and time :
-2014-07-05 14:34:14
-"""
-# Solution
-def current_date_and_time():
-    import datetime
-    current_date_time = datetime.datetime.now()
-    print(
-        f"""Current date and time :\n{current_date_time.strftime("%Y-%m-%d %H:%M:%S")}
-        """
-    )
-# current_date_and_time()
-
-"""
 Get the characters from the start to position 5 (not included):
 """
 
 b = "Hello, World!"
-print(b[:5])
+# print(b[:5])
 
 """
 Get the characters from position 2, and all the way to the end:
 """
 b = "Hello, World!"
-print(b[2:])
+# print(b[2:])
+
+"""
+Unpack a Collection
+If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
+"""
+# E.g 
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+
+# print(x)
+# print(y)
+# print(z)
+
+
+

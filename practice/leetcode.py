@@ -61,5 +61,53 @@ def area_of_circle():
     return Area
 
 area_of_circle()
+
+""" 
+5. Write a Python program that accepts the user's first and last name and prints them in reverse order with a space between them.
+"""
+
+def first_n_last_name():
+    first_name = input("What is your first name?: ")
+    last_name = input("What is your last name?: ")
+
+    my_name = [last_name, first_name]
+    print(my_name[0] + " " + my_name[1])
+
+# first_n_last_name()
     
+"""
+5. Write a Python program that accepts the user's first and last name and prints them in reverse order with a space between them.
+"""
+
+def first_and_last_name():
+    first_name = input("What is your first name?")
+    last_name = input("What is your last name?")
+    print(f"{first_name} {last_name}")
+    my_name = [last_name, first_name]
+    
+    print(" ".join(my_name))
+
+# first_and_last_name()
+    
+"""
+6. Write a Python program that accepts a sequence of comma-separated numbers from the user and generates a list and a tuple of those numbers.
+Sample data : 3, 5, 7, 23
+Output :
+List : ['3', ' 5', ' 7', ' 23']
+Tuple : ('3', ' 5', ' 7', ' 23')
+"""
+# Solution
+def list_tuple():
+    sample_data = input("Please input your list: ")
+    # sample_data = int(sample_data)
+    List = sample_data.split(",")
+    Tuple = tuple(List)
+    print(
+        f"""
+        List : {List} \n
+        Tuple : {Tuple}
+        """
+    )
+
+list_tuple()
 
