@@ -145,9 +145,10 @@ Sample Output : The examination will start from : 11 / 12 / 2014
 def extract_exam_date(): 
     import datetime
     exam_st_date = (11, 12, 2014)
-    day = exam_st_date[0]
-    month = exam_st_date[1]
-    year = exam_st_date[2]
-    print(f"The examination will start from : {day} / {month} / {year}")
+    # day = exam_st_date[0]
+    # month = exam_st_date[1]
+    # year = exam_st_date[2]
+    # print(f"The examination will start from : {day} / {month} / {year}")
+    print(f"The examination will start from : %a / %a / %a" % exam_st_date)
 
 extract_exam_date()
