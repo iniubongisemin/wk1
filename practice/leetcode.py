@@ -60,7 +60,7 @@ def area_of_circle():
     # print(Area)
     return Area
 
-area_of_circle()
+# area_of_circle()
 
 """ 
 5. Write a Python program that accepts the user's first and last name and prints them in reverse order with a space between them.
@@ -109,5 +109,45 @@ def list_tuple():
         """
     )
 
-list_tuple()
+# list_tuple()
 
+"""
+7. Write a Python program that accepts a filename from the user and prints the extension of the file.
+Sample filename : abc.java
+Output : java
+
+"""
+
+def print_file_extension():
+    sample_file_name = input("Input your filename: ")
+    Output = sample_file_name.split(".")
+    print(f"Output : {Output[1]}")
+
+# print_file_extension()
+
+"""
+8. Write a Python program to display the first and last colors from the following list.
+color_list = ["Red","Green","White" ,"Black"]
+"""
+def first_and_last_color():
+    color_list = input("Provide your color list: ")
+    colour_list = color_list.split(",")
+    print(f"{colour_list[0]}, {colour_list[3]}")
+
+# first_and_last_color()
+
+"""
+9. Write a Python program to display the examination schedule. (extract the date from exam_st_date).
+exam_st_date = (11, 12, 2014)
+Sample Output : The examination will start from : 11 / 12 / 2014
+"""
+
+def extract_exam_date(): 
+    import datetime
+    exam_st_date = (11, 12, 2014)
+    day = exam_st_date[0]
+    month = exam_st_date[1]
+    year = exam_st_date[2]
+    print(f"The examination will start from : {day} / {month} / {year}")
+
+extract_exam_date()

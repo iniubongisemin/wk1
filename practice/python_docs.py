@@ -59,4 +59,4 @@ def first_and_last_color():
     colour_list = color_list.split(",")
     print(f"{colour_list[0]}, {colour_list[3]}")
 
-first_and_last_color()
+# first_and_last_color()
