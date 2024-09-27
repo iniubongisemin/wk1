@@ -36,27 +36,4 @@ x, y, z = fruits
 # print(x)
 # print(y)
 # print(z)
-"""
-7. Write a Python program that accepts a filename from the user and prints the extension of the file.
-Sample filename : abc.java
-Output : java
 
-"""
-
-def print_file_extension():
-    sample_file_name = input("Input your filename: ")
-    Output = sample_file_name.split(".")
-    print(f"Output : {Output[1]}")
-
-# print_file_extension()
-
-"""
-8. Write a Python program to display the first and last colors from the following list.
-color_list = ["Red","Green","White" ,"Black"]
-"""
-def first_and_last_color():
-    color_list = input("Provide your color list: ")
-    colour_list = color_list.split(",")
-    print(f"{colour_list[0]}, {colour_list[3]}")
-
-# first_and_last_color()

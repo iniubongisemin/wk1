@@ -143,7 +143,6 @@ Sample Output : The examination will start from : 11 / 12 / 2014
 """
 
 def extract_exam_date(): 
-    import datetime
     exam_st_date = (11, 12, 2014)
     # day = exam_st_date[0]
     # month = exam_st_date[1]
@@ -151,4 +150,22 @@ def extract_exam_date():
     # print(f"The examination will start from : {day} / {month} / {year}")
     print(f"The examination will start from : %a / %a / %a" % exam_st_date)
 
-extract_exam_date()
+# extract_exam_date()
+    
+"""
+10. Write a Python program that accepts an integer (n) and computes the value of n+nn+nnn.
+Sample value of n is 5
+Expected Result : 615
+"""
+def nth_factorial():
+    n = (input("Please input a number: "))
+    str_n = str(n)
+    str_nn = str(n*2)
+    str_nnn = str(n*3)
+    nth_factor_ial = int(str_n)+int(str_nn)+int(str_nnn)
+
+    print(nth_factor_ial)
+    
+    return nth_factor_ial
+
+nth_factorial()
