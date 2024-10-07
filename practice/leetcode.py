@@ -132,7 +132,8 @@ color_list = ["Red","Green","White" ,"Black"]
 def first_and_last_color():
     color_list = input("Provide your color list: ")
     colour_list = color_list.split(",")
-    print(f"{colour_list[0]}, {colour_list[3]}")
+    # print(f"{colour_list[0]}, {colour_list[3]}")
+    pass 
 
 # first_and_last_color()
 
@@ -168,4 +169,100 @@ def nth_factorial():
     
     return nth_factor_ial
 
-nth_factorial()
+# nth_factorial()
+
+
+"""
+11. Write a Python program to print the documents (syntax, description etc.) of Python built-in function(s).
+Sample function : abs()
+Expected Result :
+abs(number) -> number
+Return the absolute value of the argument.
+"""
+def builtin_functions():
+    import builtins
+    result = []
+    for name in dir(builtins):
+        obj = getattr(builtins, name)  
+        if callable(obj):  
+            result.append((name, obj.__doc__))  
+    return result
+
+# Print the result
+for name, docstring in builtin_functions():
+    # print(f"{name}:\n{docstring}\n")
+    pass
+
+
+"""
+12. Write a  Python program to get the volume of a sphere with radius six.
+Click me to see the sample solution
+"""
+def volume_of_sphere(r):
+    from math import pi
+    v = pi*(r**3)
+    v = round(v, 3)
+    print(f"The volume of the sphere is: {v}m3")
+
+# volume_of_sphere(10)
+
+"""
+13. Write a Python program that prints the calendar for a given month and year.
+Note : Use 'calendar' module.
+"""
+def print_calendar():
+    import calendar
+    year_calendar = calendar.prcal(2024)
+    month_calendar = calendar.month(2024, 10)
+    print(year_calendar)
+    print("\n\n")
+    print(month_calendar)
+    print("\n\n")
+
+# print_calendar()
+    
+"""
+13. Write a Python program to print the following 'here document'.
+Sample string :
+a string that you "don't" have to escape
+This
+is a ....... multi-line
+heredoc string --------> example
+"""
+def print_heredoc():
+    heredoc = """
+a string that you "don't" have to escape
+This
+is a ....... multi-line
+heredoc string --------> example
+"""
+    # print(heredoc)
+
+# print_heredoc()
+
+"""
+14. Write a Python program to calculate the number of days between two dates.
+Sample dates : (2014, 7, 2), (2014, 7, 11)
+Expected output : 9 days
+"""
+def num_of_days():
+    from datetime import datetime
+    from datetime import timedelta
+    day_one = (2014, 7, 2)
+    day_two = (2014, 7, 11)
+    day_one = datetime(*day_one)
+    day_one = day_one.strftime("%Y-%m-%d")
+    day_one = datetime.strptime(day_one, "%Y-%m-%d")
+    day_two = datetime(*day_two)
+    day_two = day_two.strftime("%Y-%m-%d")
+    day_two = datetime.strptime(day_two, "%Y-%m-%d")
+    print(day_one)
+    print(day_two)
+    time_delta = day_two - day_one
+    print(time_delta.days)
+    
+num_of_days()
+
+
+
+
