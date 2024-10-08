@@ -200,7 +200,7 @@ Click me to see the sample solution
 """
 def volume_of_sphere(r):
     from math import pi
-    v = pi*(r**3)
+    v = 4/3*pi*(r**3)
     v = round(v, 3)
     print(f"The volume of the sphere is: {v}m3")
 
@@ -247,7 +247,6 @@ Expected output : 9 days
 """
 def num_of_days():
     from datetime import datetime
-    from datetime import timedelta
     day_one = (2014, 7, 2)
     day_two = (2014, 7, 11)
     day_one = datetime(*day_one)
@@ -261,7 +260,19 @@ def num_of_days():
     time_delta = day_two - day_one
     print(time_delta.days)
     
-num_of_days()
+# num_of_days()
+    
+"""
+15. Write a  Python program to get the volume of a sphere with radius six.
+"""
+def vol_of_sphere():
+    from math import pi
+    r = 6
+    vol = 4/3*(pi*r**3)
+    vol = int(vol)
+    print("The vol of the sphere is: %xm3"% vol)
+
+vol_of_sphere()
 
 
 
