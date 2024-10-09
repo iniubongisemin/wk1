@@ -272,8 +272,20 @@ def vol_of_sphere():
     vol = int(vol)
     print("The vol of the sphere is: %xm3"% vol)
 
-vol_of_sphere()
+# vol_of_sphere()
 
+"""
+16. Write a Python program to calculate the difference between a given number and 17. If the number is greater than 17, return twice the absolute difference.
+"""
+def diff_btw_nums(n):
+    abs_diff = abs(n-17)
+    print(f"Absolute difference between {n} and 17 = {abs_diff}")
+    if n > 17:
+        print(f"Twice the absolute difference between {n} and 17 is: ", 2*abs_diff)
+        return 2 * abs_diff
+    
+diff_btw_nums(20)
+    
 
-
+    
 
