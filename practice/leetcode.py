@@ -284,8 +284,17 @@ def diff_btw_nums(n):
         print(f"Twice the absolute difference between {n} and 17 is: ", 2*abs_diff)
         return 2 * abs_diff
     
-diff_btw_nums(20)
-    
+# diff_btw_nums(20)
 
-    
+"""
+17. Write a Python program to test whether a number is within 100 of 1000 or 2000.
+"""
+def test_number_magnitude(num):
+    if num in range(900, 1101):
+        print("Number is within 100 of 1000")
+    elif num in range(1900, 2101):
+        print("Number is within 100 of 2000")
+    else:
+        print("Number is not in any of the ranges provided")
 
+test_number_magnitude(2030)
