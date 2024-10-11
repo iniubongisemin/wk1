@@ -297,4 +297,15 @@ def test_number_magnitude(num):
     else:
         print("Number is not in any of the ranges provided")
 
-test_number_magnitude(2030)
+# test_number_magnitude(2030)
+
+"""
+18. Write a Python program to calculate the sum of three given numbers. If the values are equal, return three times their sum.
+"""
+def sum_equi_prod(x, y, z):
+    if x==y==z:
+        print(3*(x+y+z))
+    else:
+        print("The three numbers are not equal")  
+
+sum_equi_prod(2, 2, 2)
