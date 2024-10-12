@@ -304,8 +304,20 @@ def test_number_magnitude(num):
 """
 def sum_equi_prod(x, y, z):
     if x==y==z:
-        print(3*(x+y+z))
+        return 3*(x+y+z)
     else:
-        print("The three numbers are not equal")  
+        return "The three numbers are not equal"
 
-sum_equi_prod(2, 2, 2)
+# print(sum_equi_prod(2, 2, 4))
+
+"""
+19. Write a Python program to get a newly-generated string from a given string where "Is" has been added to the front. Return the string unchanged if the given string already begins with "Is".
+"""
+def append_Is():
+    str_ing = input("Please type in your string: ")
+    if "Is" == str_ing[0:2]:
+        return str_ing
+    else:
+        return "Is"+str_ing
+
+print(append_Is())
