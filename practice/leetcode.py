@@ -320,4 +320,14 @@ def append_Is():
     else:
         return "Is"+str_ing
 
-print(append_Is())
+# print(append_Is())
+
+"""
+20. Write a Python program that returns a string that is n (non-negative integer) copies of a given string.
+"""
+def n_copy(n):
+    my_string = input("Please type any word 😊: ")
+    return (my_string + " ")* n
+    # for i in range(n):
+
+print(n_copy(10)) 
