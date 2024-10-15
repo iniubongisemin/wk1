@@ -330,4 +330,31 @@ def n_copy(n):
     return (my_string + " ")* n
     # for i in range(n):
 
-print(n_copy(10)) 
+# print(n_copy(10)) 
+
+"""
+21. Write a Python program that determines whether a given number (accepted from the user) is even or odd, and prints an appropriate message to the user.
+"""
+def odd_even():
+    num = int(input("Enter a number: "))
+
+    if num % 2 == 0:
+        print(f"{num} is even.")
+    else:
+        print(f"{num} is odd.")
+
+# odd_even()
+        
+"""
+22. Write a Python program to count the number of occurences of 4 in a given list.
+"""
+my_list = [1, 4, 6, 4, 7, 4]
+def freq_count(my_list:list):
+    count = 0
+    for num in my_list:
+        if num == 4:
+            count = count + 1
+    return f"Number of occurences of 4 in my list = {count}"
+    
+print(freq_count(my_list))
+    

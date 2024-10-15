@@ -36,3 +36,24 @@ x, y, z = fruits
 # print(x)
 # print(y)
 # print(z)
+
+"""
+21. Write a Python program that determines whether a given number (accepted from the user) is even or odd, and prints an appropriate message to the user.
+"""
+def even_or_odd():
+    num = int(input("Please type in a number: "))
+    if num % 2 == 0:
+        print("Your number is an even number")
+    else:
+        print("Your number is an odd number")
+
+# even_or_odd()
+        
+"""
+20. Write a Python program that returns a string that is n (non-negative integer) copies of a given string.
+"""
+def n_copies_of_string(n):
+    my_string = "string"
+    return n * (my_string + " ")
+
+print(n_copies_of_string(10))
