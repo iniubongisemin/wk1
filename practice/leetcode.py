@@ -356,5 +356,16 @@ def freq_count(my_list:list):
             count = count + 1
     return f"Number of occurences of 4 in my list = {count}"
     
-print(freq_count(my_list))
+# print(freq_count(my_list))
+
+"""
+23. Write a Python program to get n (non-negative integer) copies of the first 2 characters of a given string. Return n copies of the whole string if the length is less than 2.
+"""
+def n_copies_of_string(n:int, str_ing:str):
+    if len(str_ing) < 2:
+        return (str_ing + " ") * n
+    else:
+        return (str_ing[0:2] + " ") * n
+    
+print(n_copies_of_string(4, "ICUI4CU"))
     
