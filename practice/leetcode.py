@@ -367,5 +367,29 @@ def n_copies_of_string(n:int, str_ing:str):
     else:
         return (str_ing[0:2] + " ") * n
     
-print(n_copies_of_string(4, "ICUI4CU"))
+# print(n_copies_of_string(4, "ICUI4CU"))
     
+"""
+24. Write a Python program to test whether a passed letter is a vowel or not.
+"""
+def vowel_test(v:str):
+    vowels = "aeiou"
+    if v.lower() in vowels:
+        return "Your letter is a vowel 😊"
+    else:
+        return "Your letter is a consonant 🤡"
+
+# print(vowel_test("Y"))
+
+"""
+25. Write a Python program that checks whether a specified value is contained within a group of values.
+"""
+num_list = [1, 5, 8, 3]
+def list_element(li_st:list, i):
+    for number in li_st:
+        if i == number:
+            return True
+    return False
+        
+print(list_element(num_list, 3))
+
