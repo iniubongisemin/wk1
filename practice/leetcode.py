@@ -410,7 +410,41 @@ def histo_gram(list1:list, list2:list):
     ax.plot(list1, list2)  
     plt.show()                           
 
-print(histo_gram(li_st, li_sts))
+# print(histo_gram(li_st, li_sts))
 
-    
+"""
+27. Write a Python program that concatenates all elements in a list into a string and returns it.
+"""
+my_list = ["you", "are", "good"]
+def concatenate_list(li_st:list):
+    new_str = ""
+    for x in li_st:
+        new_str += str(x)
+    return new_str
 
+# print(concatenate_list(my_list))
+
+"""
+28. Write a Python program to print all even numbers from a given list of numbers in the same order and stop printing any after 237 in the sequence.
+Sample numbers list :
+numbers = [    
+    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
+    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
+    815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
+    958,743, 527
+    ]
+"""
+numbers = [    
+    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
+    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
+    815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
+    958, 743, 527
+    ] 
+def print_even_num(li_st):
+    for n in li_st:
+        if n % 2 == 0:
+            while n < 237:
+                print(n)
+                break
+
+print_even_num(numbers)
