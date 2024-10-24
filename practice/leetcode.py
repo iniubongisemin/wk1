@@ -447,4 +447,41 @@ def print_even_num(li_st):
                 print(n)
                 break
 
-print_even_num(numbers)
+# print_even_num(numbers)
+
+"""
+29. Write a Python program that prints out all colors from color_list_1 that are not present in color_list_2.
+Test Data :
+Expected Output :
+{'Black', 'White'}
+"""
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+
+def check_colours(list1:set, list2:set):
+    for colour in list1:
+        while colour in list2:
+            list1.remove(colour)
+            return list1
+
+# print(check_colours(color_list_1, color_list_2))
+
+"""
+30. Write a Python program that will accept the base and height of a triangle and compute its area.
+"""
+def area_of_triangle(base, height):
+    area = 0.5 * base * height
+    return (f"Area of the triangle is: {area}")
+
+# print(area_of_triangle(5, 7))
+
+"""
+31. Write a Python program that computes the greatest common divisor (GCD) of two positive integers.
+"""
+def greatest_common_divisor(y, z):
+    import math
+    x = math.gcd(y, z)
+    return x
+
+print(f"GCD = {greatest_common_divisor(120, 450)}")
+
