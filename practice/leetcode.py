@@ -483,5 +483,15 @@ def greatest_common_divisor(y, z):
     x = math.gcd(y, z)
     return x
 
-print(f"GCD = {greatest_common_divisor(120, 450)}")
+# print(f"GCD = {greatest_common_divisor(120, 450)}")
+
+"""
+32. Write a Python program to find the least common multiple (LCM) of two positive integers.
+"""
+def least_common_multiple(x, y):
+    import math
+    a = math.lcm(x, y)
+    return a
+
+print(f"LCM of X and Y: ", least_common_multiple(6, 20))
 
