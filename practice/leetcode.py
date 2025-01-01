@@ -353,7 +353,8 @@ def freq_count(my_list:list):
     count = 0
     for num in my_list:
         if num == 4:
-            count = count + 1
+            # count = count + 1
+            count += 1
     return f"Number of occurences of 4 in my list = {count}"
     
 # print(freq_count(my_list))
@@ -400,15 +401,15 @@ li_st = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 li_sts = [11, 21, 31, 41, 51, 61, 71, 81, 91, 101]
 
 # def histo_gram():
-def histo_gram(list1:list, list2:list):
-    import matplotlib.pyplot as plt 
-    # import numpy as np # type: ignore
-    # plt.hist(my_list, bins=10)
+# def histo_gram(list1:list, list2:list):
+#     import matplotlib.pyplot as plt 
+#     # import numpy as np # type: ignore
+#     # plt.hist(my_list, bins=10)
 
-    # # plt.show()
-    fig, ax = plt.subplots()             
-    ax.plot(list1, list2)  
-    plt.show()                           
+#     # # plt.show()
+#     fig, ax = plt.subplots()             
+#     ax.plot(list1, list2)  
+#     plt.show()                           
 
 # print(histo_gram(li_st, li_sts))
 
@@ -493,5 +494,20 @@ def least_common_multiple(x, y):
     a = math.lcm(x, y)
     return a
 
-print(f"LCM of X and Y: ", least_common_multiple(6, 20))
+# print(f"LCM of X and Y: ", least_common_multiple(6, 20))
 
+"""
+33. Write a Python program to sum three given integers. However, if two values are equal, the sum will be zero.
+"""
+
+def sum_three_integers(a, b, c):
+    
+    if a == b or b == c or a == c:
+        return 0
+    else:
+        return a + b + c
+
+# Test the function
+print(sum_three_integers(1, 2, 3))  
+print(sum_three_integers(3, 3, 4))  
+print(sum_three_integers(5, 5, 5))  

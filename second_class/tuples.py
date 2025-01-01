@@ -142,7 +142,7 @@ berries = ('strawberry', 'raspberry', 'gooseberry', 'mulberry', 'burberry')
 (blue, red, *List) = berries
 # print(blue)
 # print(red)
-# print(List)
+print(List)
 
 # NB: if the asterisk is added to another variable name other than the last, python will assign values to the variable until the number of values left matches the number of variables left
 fruits = ('apple', 'mango', 'papaya', 'pineapple', 'cherry')
