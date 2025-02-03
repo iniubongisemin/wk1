@@ -401,15 +401,15 @@ li_st = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 li_sts = [11, 21, 31, 41, 51, 61, 71, 81, 91, 101]
 
 # def histo_gram():
-# def histo_gram(list1:list, list2:list):
-#     import matplotlib.pyplot as plt 
-#     # import numpy as np # type: ignore
-#     # plt.hist(my_list, bins=10)
+def histo_gram(list1:list, list2:list):
+    import matplotlib.pyplot as plt 
+    # import numpy as np # type: ignore
+    # plt.hist(my_list, bins=10)
 
-#     # # plt.show()
-#     fig, ax = plt.subplots()             
-#     ax.plot(list1, list2)  
-#     plt.show()                           
+    # # plt.show()
+    fig, ax = plt.subplots()             
+    ax.plot(list1, list2)  
+    plt.show()                           
 
 # print(histo_gram(li_st, li_sts))
 
