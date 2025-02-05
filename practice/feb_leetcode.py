@@ -33,3 +33,22 @@ def date_time_display():
     print(f"Current date and time: \n{datetime.now().replace(microsecond=0)}")
 
 date_time_display()
+
+"""
+4. Circle Area Calculator
+Write a Python program that calculates the area of a circle based on the radius entered by the user.
+Sample Output :
+r = 1.1
+Area = 3.8013271108436504
+"""
+def area_of_circle():
+    from math import pi
+    r = float(input(f"Please input the radius of your circle: "))
+    area = pi*r**2
+    print(f"Area = {area}")
+area_of_circle()
+
+"""
+5. Reverse Full Name
+Write a Python program that accepts the user's first and last name and prints them in reverse order with a space between them.
+"""
