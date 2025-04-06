@@ -123,7 +123,7 @@ def print_file_extension():
     Output = sample_file_name.split(".")
     print(f"Output : {Output[1]}")
 
-# print_file_extension()
+# print_file_extension()    
 
 """
 8. Write a Python program to display the first and last colors from the following list.

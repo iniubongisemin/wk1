@@ -32,7 +32,7 @@ def date_time_display():
     from datetime import datetime
     print(f"Current date and time: \n{datetime.now().replace(microsecond=0)}")
 
-date_time_display()
+# date_time_display()
 
 """
 4. Circle Area Calculator
@@ -46,9 +46,34 @@ def area_of_circle():
     r = float(input(f"Please input the radius of your circle: "))
     area = pi*r**2
     print(f"Area = {area}")
-area_of_circle()
+# area_of_circle()
 
 """
 5. Reverse Full Name
 Write a Python program that accepts the user's first and last name and prints them in reverse order with a space between them.
 """
+def name_reversor():
+    name = input("What is your name? ")
+    output = name.split(" ")
+    reversed_name = output[1] + " " + output[0]
+    print(reversed_name)
+# name_reversor()
+
+"""
+6. List and Tuple Generator
+Write a Python program that accepts a sequence of comma-separated numbers from the user and generates a list and a tuple of those numbers.
+Sample data : 3, 5, 7, 23
+Output :
+List : ['3', ' 5', ' 7', ' 23']
+Tuple : ('3', ' 5', ' 7', ' 23')
+"""
+def list_tuple_generator():
+    sample_data = input("Please provide a sequence of numbers: ")
+    split_data = sample_data.split(", ")
+    # list_data = [sample_data]
+    # tuple_data = (i for i in split_data)
+    tuple_data = tuple(sample_data[0:])
+    print(f"List : {split_data} \nTuple : {tuple_data} ")
+
+list_tuple_generator()
+
