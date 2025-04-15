@@ -17,7 +17,7 @@ f = open("C:/Users/eugen/OneDrive/Documents/backend/wk1/first_class/demofile#2.t
 "READ ONLY PARTS OF THE FILE"
 # Return first 5 characters of the file
 f = open("demofile.txt", "r")
-# print(f.read(5))
+print(f.read(5))
 
 # By calling readline() two times, you can read the two first lines:
 f = open("C:/Users/eugen/OneDrive/Documents/backend/wk1/first_class/demofile#2.txt", "r")
@@ -29,7 +29,20 @@ f = open("C:/Users/eugen/OneDrive/Documents/backend/wk1/first_class/demofile#2.t
     # print(x)
     # pass
 
-print(f.read())
+file = open("new_file.txt", "w") # Overwrites the entire file with new content!!!
+file.write("Woops! I have deleted the content!")
+file.close()
 
-# Close Files Once you are done with them
-f.close()
+file = open("new_file.txt")
+print(file.read())
+file.close()
+
+new_file = open("file.txt", "x")
+new_file.write("new_file.txt created!")
+file.close()
+
+new_file = open("file.txt", "r")
+print(new_file.read())
+
+# Close files once you are done with them
+# f.close()
