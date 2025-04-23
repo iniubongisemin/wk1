@@ -81,12 +81,74 @@ print(abs.__doc__)
     
 """
 12. Monthly Calendar Display
-
 Write a Python program that prints the calendar for a given month and year.
 Note : Use 'calendar' module.
 """
 def monthly_calendar():
     import calendar
     print(calendar.month(2025, 4))
-monthly_calendar()
+# monthly_calendar()
+
+"""
+13. Multi-line Here Document
+Write a Python program to print the following 'here document'.
+Sample string :
+a string that you "don't" have to escape
+This
+is a ....... multi-line
+heredoc string --------> example
+"""
+def multi_line_doc():
+    print(
+    """
+    a string that you "don't" have to escape
+    This
+    is a ....... multi-line
+    heredoc string --------> example
+    """
+    )
+# multi_line_doc()
+
+"""
+14. Days Between Dates
+Write a Python program to calculate the number of days between two dates.
+Sample dates : (2014, 7, 2), (2014, 7, 11)
+Expected output : 9 days
+"""
+date_one = (2014, 7, 2)
+date_two = (2014, 7, 11)
+def days_btw_dates(x, y):
+    import datetime as dt
+    
+    # first_date = float(f"{x[0]/x[1]/x[2]}")
+    # last_date = float(f"{y[0]/y[1]/y[2]}")
+    # time_diff = dt.timedelta(hours=last_date)
+    # time_delta = dt.timedelta(hours=first_date)
+    # time_now = datetime.now()
+    # first_equiv_time = time_now + time_diff 
+    # last_equiv_time = time_now + time_delta
+    # print("FIRST_DATE", first_equiv_time)
+    # print("LAST_DATE", last_equiv_time)
+    # # diff = datetime()
+    # diff = last_equiv_time - first_equiv_time
+    # print(f"Expected output : {diff}, DATATYPE::::{type(diff)}")
+
+    first_date = dt.date(*x)
+    second_date = dt.date(*y)
+    delta = second_date - first_date
+    print("SECOND_DATE>>>>>", second_date, "FIRST_DATE>>>>>", first_date)
+    print(f"Expected output : {delta}")
+
+days_btw_dates(date_one, date_two)
+
+"""
+15. Sphere Volume Calculator
+Write a Python program to get the volume of a sphere with radius six.
+"""
+def vol_of_sphere(r):
+    from math import pi
+    volume = 4/3*pi*r**3
+    print(f"{int(volume)}cm3")
+
+vol_of_sphere(6)
 

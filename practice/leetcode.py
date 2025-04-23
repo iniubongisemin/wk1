@@ -250,17 +250,17 @@ def num_of_days():
     day_one = (2014, 7, 2)
     day_two = (2014, 7, 11)
     day_one = datetime(*day_one)
-    day_one = day_one.strftime("%Y-%m-%d")
-    day_one = datetime.strptime(day_one, "%Y-%m-%d")
+    # day_one = day_one.strftime("%Y-%m-%d")
+    # day_one = datetime.strptime(day_one, "%Y-%m-%d")
     day_two = datetime(*day_two)
-    day_two = day_two.strftime("%Y-%m-%d")
-    day_two = datetime.strptime(day_two, "%Y-%m-%d")
+    # day_two = day_two.strftime("%Y-%m-%d")
+    # day_two = datetime.strptime(day_two, "%Y-%m-%d")
     print(day_one)
     print(day_two)
     time_delta = day_two - day_one
     print(time_delta.days)
     
-# num_of_days()
+num_of_days()
     
 """
 15. Write a  Python program to get the volume of a sphere with radius six.
