@@ -167,3 +167,7 @@ def diff_from_17(x:int):
         print("X is not greater than 17!")
 diff_from_17(100)
 
+"""
+17. Number Range Tester
+Write a Python program to test whether a number is within 100 of 1000 or 2000.
+"""
