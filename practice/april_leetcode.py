@@ -139,7 +139,7 @@ def days_btw_dates(x, y):
     print("SECOND_DATE>>>>>", second_date, "FIRST_DATE>>>>>", first_date)
     print(f"Expected output : {delta}")
 
-days_btw_dates(date_one, date_two)
+# days_btw_dates(date_one, date_two)
 
 """
 15. Sphere Volume Calculator
@@ -150,5 +150,20 @@ def vol_of_sphere(r):
     volume = 4/3*pi*r**3
     print(f"{int(volume)}cm3")
 
-vol_of_sphere(6)
+# vol_of_sphere(6)
+
+"""
+16. Difference from 17
+Write a Python program to calculate the difference between a given number and 17. If the number is greater than 17, return twice the absolute difference.
+"""
+def diff_from_17(x:int):
+    diff = x - 17 
+    abs_diff = abs(x - 17) 
+    print("ABS_DIFF>>>>>>>", abs_diff)
+    if diff > 17:
+        print(2*abs_diff)
+        return 2*abs_diff
+    else:
+        print("X is not greater than 17!")
+diff_from_17(100)
 
