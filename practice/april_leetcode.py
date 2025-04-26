@@ -171,3 +171,10 @@ diff_from_17(100)
 17. Number Range Tester
 Write a Python program to test whether a number is within 100 of 1000 or 2000.
 """
+def num_range_tester(x):
+    if x in range(900, 1100):
+        print("yes X is within 100 of 1000")
+    elif x in range(1900, 2100):
+        print("yes X is within 100 of 2000")
+
+num_range_tester(1001)
