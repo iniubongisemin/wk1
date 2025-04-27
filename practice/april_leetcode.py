@@ -165,7 +165,7 @@ def diff_from_17(x:int):
         return 2*abs_diff
     else:
         print("X is not greater than 17!")
-diff_from_17(100)
+# diff_from_17(100)
 
 """
 17. Number Range Tester
@@ -177,4 +177,17 @@ def num_range_tester(x):
     elif x in range(1900, 2100):
         print("yes X is within 100 of 2000")
 
-num_range_tester(1001)
+# num_range_tester(1001)
+
+"""
+18. Triple Sum Calculator
+Write a Python program to calculate the sum of three given numbers. If the values are equal, return three times their sum.
+"""
+def triple_sum_calculator(x, y, z):
+    summ=x+y+z
+    if x==y==z:
+        print("The values are equal", 3*summ)
+        return 3*summ
+    else:
+        print("The values are not equal")
+triple_sum_calculator(1,1,1)
