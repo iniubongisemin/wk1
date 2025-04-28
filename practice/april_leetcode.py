@@ -190,4 +190,16 @@ def triple_sum_calculator(x, y, z):
         return 3*summ
     else:
         print("The values are not equal")
-triple_sum_calculator(1,1,1)
+# triple_sum_calculator(1,1,1)
+
+"""
+19. Prefix "Is" String Modifier
+Write a Python program to get a newly-generated string from a given string where "Is" has been added to the front. Return the string unchanged if the given string already begins with "Is".
+"""
+def prefix_is(stringg:str):
+    if stringg[:2] == "Is":
+        print(stringg[:2])
+        print(stringg)
+    else:
+        print("Is"+stringg)
+prefix_is("abella")
