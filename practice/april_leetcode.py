@@ -203,3 +203,21 @@ def prefix_is(stringg:str):
     else:
         print("Is"+stringg)
 prefix_is("abella")
+
+"""
+20. String Copy Generator
+Write a Python program that returns a string that is n (non-negative integer) copies of a given string.
+"""
+def string_copy_gen(strng:str, n:int):
+    print((strng+" ")*n, )
+    return strng*n
+string_copy_gen("string", 4)
+# import random
+# accounts = set()
+# while len(accounts) < 1000:
+#     num = random.randint(1000000000, 9999999999)
+#     accounts.add(num)
+    
+# with open("account_numbers.csv", "w") as f:
+#     for num in accounts:
+#         f.write(f"{num}\n")
