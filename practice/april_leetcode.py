@@ -202,7 +202,7 @@ def prefix_is(stringg:str):
         print(stringg)
     else:
         print("Is"+stringg)
-prefix_is("abella")
+# prefix_is("abella")
 
 """
 20. String Copy Generator
@@ -211,7 +211,51 @@ Write a Python program that returns a string that is n (non-negative integer) co
 def string_copy_gen(strng:str, n:int):
     print((strng+" ")*n, )
     return strng*n
-string_copy_gen("string", 4)
+# string_copy_gen("string", 4)
+
+"""
+21. Even or Odd Checker
+Write a Python program that determines whether a given number (accepted from the user) is even or odd, and prints an appropriate message to the user.
+"""
+def even_odd_checker(num):
+    x = num%2
+    if x == 0:
+        print("Your number is even")
+    else:
+        print("Your number is odd")
+# even_odd_checker(7)
+
+"""
+22. Count 4 in List
+Write a Python program to count the number 4 in a given list.
+"""
+listt = [0, 1, 2, 3, 4, 5, 6, 7, 4, 400, 8, 9]
+def count_num_4(listt:list):
+    count = 0
+    print(listt[3])
+    for i in listt:
+        if i == 4:
+            count = count + 1
+    print(f"4 occurs {count} times")
+count_num_4(listt)
+"""
+22.i. Write a Python program to count how many numbers in a list contain the digit 4.
+"""
+def contains_4(li_st:list):
+    count = 0
+    for i in li_st:
+        j = str(i)
+        for k in j:
+            if "4" in k:
+                count += 1
+    print(f"{count} numbers in the list contain 4")
+contains_4(listt)
+
+
+"""
+22.ii. Write a function that finds the most frequently occurring number in a list.
+"""
+
 # import random
 # accounts = set()
 # while len(accounts) < 1000:
