@@ -268,6 +268,19 @@ def most_freq(listt:list):
     return max(freq, key=freq.get)
 most_freq(listt=listt)
 
+
+"""
+24. Vowel Tester
+Write a Python program to test whether a passed letter is a vowel or not.
+"""
+def vowel_checker(vowel):
+    vowels = ["a", "e", "i", "o", "u"]
+    if vowel in vowels:
+        print(f"{vowel} is a vowel")
+vowel_checker("i")
+
+
+
 """ALTERNATIVE APPROACH"""
 from collections import Counter
 
