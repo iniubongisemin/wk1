@@ -133,11 +133,11 @@ def days_btw_dates(x, y):
     # diff = last_equiv_time - first_equiv_time
     # print(f"Expected output : {diff}, DATATYPE::::{type(diff)}")
 
-    first_date = dt.date(*x)
-    second_date = dt.date(*y)
-    delta = second_date - first_date
-    print("SECOND_DATE>>>>>", second_date, "FIRST_DATE>>>>>", first_date)
-    print(f"Expected output : {delta}")
+    # first_date = dt.date(*x)
+    # second_date = dt.date(*y)
+    # delta = second_date - first_date
+    # print("SECOND_DATE>>>>>", second_date, "FIRST_DATE>>>>>", first_date)
+    # print(f"Expected output : {delta}")
 
 # days_btw_dates(date_one, date_two)
 
@@ -229,7 +229,7 @@ def even_odd_checker(num):
 22. Count 4 in List
 Write a Python program to count the number 4 in a given list.
 """
-listt = [0, 1, 2, 3, 4, 5, 6, 7, 4, 400, 8, 9]
+listt = [0, 1, 2, 3, 4, 5, 6, 7, 4, 400, 8, 400, 400, 400, 9]
 def count_num_4(listt:list):
     count = 0
     print(listt[3])
@@ -237,7 +237,8 @@ def count_num_4(listt:list):
         if i == 4:
             count = count + 1
     print(f"4 occurs {count} times")
-count_num_4(listt)
+# count_num_4(listt)
+
 """
 22.i. Write a Python program to count how many numbers in a list contain the digit 4.
 """
@@ -249,12 +250,33 @@ def contains_4(li_st:list):
             if "4" in k:
                 count += 1
     print(f"{count} numbers in the list contain 4")
-contains_4(listt)
+# contains_4(listt)
 
 
 """
 22.ii. Write a function that finds the most frequently occurring number in a list.
 """
+def most_freq(listt:list):
+    freq = {}
+    for i in listt:
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    print(freq)
+    print("MOST_FREQ_VALUE_IN_LIST>>>>>>>>>", max(freq, key=freq.get))
+    return max(freq, key=freq.get)
+most_freq(listt=listt)
+
+"""ALTERNATIVE APPROACH"""
+from collections import Counter
+
+def most_freq_num(listt:list):
+    counts = Counter(listt)
+    most_common = counts.most_common(1)
+    print(most_common[0][0])
+most_freq_num(listt)
+
 
 # import random
 # accounts = set()
