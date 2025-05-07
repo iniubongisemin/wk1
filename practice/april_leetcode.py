@@ -277,8 +277,7 @@ def vowel_checker(vowel):
     vowels = ["a", "e", "i", "o", "u"]
     if vowel in vowels:
         print(f"{vowel} is a vowel")
-vowel_checker("i")
-
+# vowel_checker("i")
 
 
 """ALTERNATIVE APPROACH"""
@@ -288,7 +287,32 @@ def most_freq_num(listt:list):
     counts = Counter(listt)
     most_common = counts.most_common(1)
     print(most_common[0][0])
-most_freq_num(listt)
+# most_freq_num(listt)
+
+
+"""
+25. Value in Group Tester
+Write a Python program that checks whether a specified value is contained within a group of values.
+Test Data :
+3 -> [1, 5, 8, 3] : True
+-1 -> [1, 5, 8, 3] : False
+"""
+
+def value_in_group_tester(listtt:list):
+    for i in listtt:
+        if 300 in listtt:
+            print(True)
+            return True
+        else:
+            print(False)
+            return False
+value_in_group_tester(listt)
+
+"""
+26. List Histogram
+Write a Python program to create a histogram from a given list of integers.
+"""
+
 
 
 # import random
