@@ -52,10 +52,17 @@ Sample value of n is 5
 Expected Result : 615
 """
 def number_expansion_calculator():
-    n = int(input("Please type your number: "))
-    num_exp = n+n**2+n**3
+    n = input("Please type your number: ")
+    # num_exp = n+n**2+n**3
+    num_exp = [n, 2*n, 3*n]
+
+    for i in num_exp:
+        num_exp.pop(i)
+        x = int(i)
+        num_exp.append(x)
+    
     print("The value of n is: ", num_exp)
-# number_expansion_calculator()
+number_expansion_calculator()
 
 """
 11. Function Documentation Printer
@@ -306,12 +313,22 @@ def value_in_group_tester(listtt:list):
         else:
             print(False)
             return False
-value_in_group_tester(listt)
+# value_in_group_tester(listt)
 
 """
 26. List Histogram
 Write a Python program to create a histogram from a given list of integers.
 """
+li_st = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+li_sts = [11, 21, 31, 41, 51, 61, 71, 81, 91, 101]
+def histo_gram(list1:list, list2:list):
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots()
+    ax.plot(list1, list2)
+    plt.show()
+print(histo_gram(list1=li_st, list2=li_sts))
+
+
 
 
 
