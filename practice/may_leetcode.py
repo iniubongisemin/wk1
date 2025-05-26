@@ -19,7 +19,7 @@ def concat_list_with_space(lis:list):
         j = str(i)
         result += j+"✅"
     return result
-print(concat_list_with_space(li_sts))
+# print(concat_list_with_space(li_sts))
 
 word_list = ["alpha", "bravo", "charlie", "echo", "delta", "foxtrot"]
 """
@@ -28,12 +28,28 @@ Write a function that joins a list of strings into a single string but reverses 
 def join_reverse(listt:list):
     all_str = ""
     for i in listt:
-        # j = str(i)
-        
-        # for k in i:
         x = i[::-1]
-        # print(x)
         all_str += x
     print(all_str)
+# join_reverse(word_list)
 
-join_reverse(word_list)
+"""
+Write a Python program to concatenate elements from a list, separating numbers and letters into different sections.
+"""
+lit = [11, 21, 31, 41, 51, 61, 71, 81, 91, 101, "a", "e", "i", "o", "u"]
+
+def list_str(listt):
+    all_list_string = []
+    strng = ""
+    integer = ""
+
+    for i in listt:
+        if isinstance(i, str):
+            strng += i
+        if isinstance(i, int):
+            j = str(i)
+            integer += j
+    all_list_string.append(integer)
+    all_list_string.append(strng)
+    print(all_list_string)
+list_str(lit)
