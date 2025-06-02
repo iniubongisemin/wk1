@@ -78,3 +78,38 @@ def even_num_till(number:list):
         else:
             continue
 even_num_till(sample_numbers)
+
+"""
+29. Unique Colors Finder
+Write a Python program that prints out all colors from color_list_1 that are not present in color_list_2.
+Test Data :
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+Expected Output :
+{'Black', 'White'}
+"""
+color_list_1 = set(["White", "Black", "Red"])
+color_list_1 = list(color_list_1)
+# color_list_1 = color_list_1[0]
+# print(color_list_1)
+color_list_2 = set(["Red", "Green"])
+color_list_2 = list(color_list_2)
+# color_list_2 = color_list_2[0]
+# print(color_list_2)
+def unique_colors_finder(c_list1:list, c_list2:list):
+    for i in c_list1:
+        if i not in c_list2:
+            print(i)
+# unique_colors_finder(color_list_1, color_list_2)
+
+"""
+30. Triangle Area Calculator
+Write a Python program that will accept the base and height of a triangle and compute its area.
+"""
+b = 4
+h = 2
+def area_of_triangle(b, h):
+    a = 1/2 * b * h
+    print(a)
+area_of_triangle(b, h)
+
