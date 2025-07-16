@@ -4,7 +4,7 @@ def area_of_triangle(b, h):
     area = 0.5 * b * h
     print(f"Area of triangle is {area}cm2")
 
-area_of_triangle(5, 10)
+# area_of_triangle(5, 10)
 
 from math import pi
 
@@ -12,4 +12,24 @@ from math import pi
 def circumference_of_circle(r:float):
     circ_of_circle = 2 * pi * r
     print(f"The circumference of the circle is {circ_of_circle}")
-circumference_of_circle(4)
+# circumference_of_circle(4)
+
+"""
+Write a short program that prints each number from 1 to 100 on a new line. 
+
+For each multiple of 3, print "Fizz" instead of the number. 
+
+For each multiple of 5, print "Buzz" instead of the number. 
+
+For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+
+"""
+def fizz_buzz():
+    for i in range(1, 100):
+        if i%3 == 0 and i%5 == 0:
+            print("FizzBuzz")
+        elif i%3 == 0:
+            print("Fizz")
+        elif i%5 == 0:
+            print("Buzz")
+fizz_buzz()
