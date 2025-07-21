@@ -33,3 +33,15 @@ def fizz_buzz():
         elif i%5 == 0:
             print("Buzz")
 fizz_buzz()
+
+"""
+33. Triple Sum with Equality Rule
+Write a Python program to sum three given integers. However, if two values are equal, the sum will be zero.
+"""
+def triple_sum_equality(a, b, c):
+    num_sum = a + b + c
+    if a == b or a == c or b == c:
+        num_sum = 0
+    print(f"SUM = {num_sum}")
+
+triple_sum_equality(6, 2, 6)
