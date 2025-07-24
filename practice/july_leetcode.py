@@ -49,7 +49,7 @@ def triple_sum_equality(a, b, c):
 # triple_sum_equality(6, 2, 6)
 
 """"
-34. Write a Python program to sum two given integers. However, if the sum is between 15 and 20 it will return 20.
+Write a program to sum two given integers. However, if the sum is between 15 and 20 it will return 20.
 """
 def sum_integ(x:int, y:int):
     int_sum = x + y
@@ -60,4 +60,23 @@ def sum_integ(x:int, y:int):
         print(int_sum)
         return int_sum 
     
-sum_integ(1, 7)
+# sum_integ(1, 7)
+
+
+"""
+35. Equality or 5 Rule Checker
+Write a Python program that returns true if the two given integer values are equal or their sum or difference is 5.
+"""
+
+def equality_or_five(x, y):
+    if x == y:
+        print(True)
+    elif x + y == 5 or x - y == 5:
+        print(True)
+    elif y - x == 5:
+        print(True)
+    else:
+        print(False)
+    
+equality_or_five(10, 5)
+
