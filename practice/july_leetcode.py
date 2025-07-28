@@ -67,7 +67,6 @@ def sum_integ(x:int, y:int):
 35. Equality or 5 Rule Checker
 Write a Python program that returns true if the two given integer values are equal or their sum or difference is 5.
 """
-
 def equality_or_five(x, y):
     if x == y:
         print(True)
@@ -78,5 +77,25 @@ def equality_or_five(x, y):
     else:
         print(False)
     
-equality_or_five(10, 5)
+# equality_or_five(10, 5)
 
+"""
+36. Add Integers Validator
+Write a Python program to add two objects if both objects are integers.
+"""
+
+def add_int(x, y):
+    if type(x) == int and type(y) == int:
+        print(x + y)
+    else:
+        print("One or both of the numbers are not integers")
+add_int(30, 56)
+
+"""
+37. Personal Info Formatter
+Write a Python program that displays your name, age, and address on three different lines.
+"""
+def info_formatter(name, age, address):
+    print(f"Name: \t{name}\n Age: {age}\n Addr: {address}")
+
+info_formatter("Doe", 20, "No.27 Alara str, Onike.")
