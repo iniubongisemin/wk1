@@ -89,7 +89,7 @@ def add_int(x, y):
         print(x + y)
     else:
         print("One or both of the numbers are not integers")
-add_int(30, 56)
+# add_int(30, 56)
 
 """
 37. Personal Info Formatter
@@ -98,4 +98,26 @@ Write a Python program that displays your name, age, and address on three differ
 def info_formatter(name, age, address):
     print(f"Name: \t{name}\n Age: {age}\n Addr: {address}")
 
-info_formatter("Doe", 20, "No.27 Alara str, Onike.")
+# info_formatter("Doe", 20, "No.27 Alara str, Onike.")
+
+
+"""
+Character Frequency Counter
+Write a program to count the number of occurrences of a specific character in a string.
+"""
+def char_freq_counter(word:str):
+    count = 0
+    for i in word:
+        if i == "o":
+            count += 1
+    print(f"Letter 'O' occurs {count} times")
+# char_freq_counter("zooooooom")
+
+"""
+66. BMI Calculator
+
+Write a Python program to calculate the body mass index.
+"""
+def bmi(height, weight):
+    print(f"BMI = {weight/(height)**2}")
+bmi(1.73, 63)
