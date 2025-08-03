@@ -115,9 +115,50 @@ def char_freq_counter(word:str):
 
 """
 66. BMI Calculator
-
 Write a Python program to calculate the body mass index.
 """
 def bmi(height, weight):
     print(f"BMI = {weight/(height)**2}")
 bmi(1.73, 63)
+
+"""
+38. Expression Solver
+Write a Python program to solve (x + y) * (x + y).
+Test Data : x = 4, y = 3
+Expected Output : (4 + 3) ^ 2) = 49
+"""
+def expression_solver(x, y):
+    z = (x + y) * (x + y)
+    print(z)
+expression_solver(4, 3)
+
+"""
+39. Future Value Calculator
+Write a Python program to compute the future value of a specified principal amount, rate of interest, and number of years.
+Test Data : amt = 10000, int = 3.5, years = 7
+Expected Output : 12722.79
+"""
+def future_value_calc(p, r, t):
+    S_I = (p*r*t)/100
+    print(f"SI:{S_I}")
+
+# future_value_calc(10000, 7, 3.5)
+
+"""
+72. Math Module Details
+Write a Python program to get the details of the math module.
+"""
+def math_module(i, j):
+    import math
+    gcd = math.gcd(i, j)
+    print(f"GCD {gcd}")
+# math_module(60, 80)
+
+"""
+88. Sum Expression Printer
+Given variables x=30 and y=20, write a Python program to print "30+20=50".
+"""
+def sum_expression_printer(x, y):
+    z = x + y
+    print(f"{x} + {y} = {z}")
+sum_expression_printer(30, 20)
