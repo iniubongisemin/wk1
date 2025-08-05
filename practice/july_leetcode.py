@@ -119,7 +119,7 @@ Write a Python program to calculate the body mass index.
 """
 def bmi(height, weight):
     print(f"BMI = {weight/(height)**2}")
-bmi(1.73, 63)
+# bmi(1.73, 63)
 
 """
 38. Expression Solver
@@ -130,7 +130,7 @@ Expected Output : (4 + 3) ^ 2) = 49
 def expression_solver(x, y):
     z = (x + y) * (x + y)
     print(z)
-expression_solver(4, 3)
+# expression_solver(4, 3)
 
 """
 39. Future Value Calculator
@@ -161,4 +161,14 @@ Given variables x=30 and y=20, write a Python program to print "30+20=50".
 def sum_expression_printer(x, y):
     z = x + y
     print(f"{x} + {y} = {z}")
-sum_expression_printer(30, 20)
+# sum_expression_printer(30, 20)
+
+"""
+32. LCM Calculator 
+Write a Python program to find the least common multiple (LCM) of two positive integers.
+"""
+def lcm_calculator(x, y):
+    import math
+    LCM = math.lcm(x, y)
+    print(f"The L.C.M of {x} & {y} is: {LCM}")
+lcm_calculator(23, 50)
