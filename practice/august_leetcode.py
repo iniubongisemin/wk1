@@ -22,4 +22,17 @@ def slope(x1, y1, x2, y2):
     z =  x + y 
     d = math.sqrt(z)
     print(d)
-slope(3, 4, 2, 2)
+# slope(3, 4, 2, 2)
+
+"""
+41. File Existence Checker
+Write a Python program to check whether a file exists.
+"""
+def os_info():
+    import os
+    file = os.path.isfile("names.txt")
+    if file is True:
+        print("The file exists")
+    else:
+        print("The file does not exist")
+os_info()
