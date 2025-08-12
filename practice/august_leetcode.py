@@ -68,4 +68,19 @@ def shell_mode_detector():
     import platform
     info = platform.architecture()[0]
     print(f"{info}")
-shell_mode_detector()
+# shell_mode_detector()
+
+"""
+48. String to Numeric Parser
+Write a Python program to parse a string to float or integer.
+"""
+def string_num(var: str):
+    if "." in var:
+        variable = float(var)
+    else:
+        variable = int(var) 
+    print(f"{variable}")
+string_num("2.05")
+
+defi = "ini"
+

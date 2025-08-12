@@ -28,7 +28,7 @@ Sample Output :
 Current date and time :
 2014-07-05 14:34:14
 """
-def date_time_display():
+def date_time_display(x, y):
     from datetime import datetime
     print(f"Current date and time: \n{datetime.now().replace(microsecond=0)}")
 
