@@ -28,11 +28,44 @@ def slope(x1, y1, x2, y2):
 41. File Existence Checker
 Write a Python program to check whether a file exists.
 """
-def os_info():
+def file_existence():
     import os
     file = os.path.isfile("names.txt")
     if file is True:
         print("The file exists")
     else:
         print("The file does not exist")
-os_info()
+# file_existence()
+
+"""
+43. OS and Platform Info
+Write a Python program to get OS name, platform and release information.
+"""
+def os_info():
+    import os
+    import platform
+    os_name = os.name
+    platform_info = platform.platform()
+    os_release = platform.release()
+    print(f"OS: {os_name} Platform: {platform_info} \n Release: {os_release}")
+# os_info()
+
+"""
+44. Python Site Packages Locator
+Write a Python program to locate Python site packages.
+"""
+def site_packages():
+    import site
+    pckge = site.getsitepackages()
+    print(f"SITE_PACKAGES_LIST>>>>>{pckge}")
+# site_packages()
+
+"""
+42. Shell Mode Detector
+Write a Python program to determine if a Python shell is executing in 32bit or 64bit mode on OS.
+"""
+def shell_mode_detector():
+    import platform
+    info = platform.architecture()[0]
+    print(f"{info}")
+shell_mode_detector()
