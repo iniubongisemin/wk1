@@ -82,5 +82,16 @@ def string_num(var: str):
     print(f"{variable}")
 string_num("2.05")
 
-defi = "ini"
+"""
+45. External Command Runner
+Write a Python program that calls an external command.
+"""
+def ext_command(command: str):
+    import subprocess
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, shell=True, check=True)
+        print(f"Exit Code: {result.returncode}")
+    except subprocess.CalledProcessError as e:
+        return str(f"An error occurred {e}")
+ext_command("dir")
 
