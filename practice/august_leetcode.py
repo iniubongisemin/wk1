@@ -80,7 +80,7 @@ def string_num(var: str):
     else:
         variable = int(var) 
     print(f"{variable}")
-string_num("2.05")
+# string_num("2.05")
 
 """
 45. External Command Runner
@@ -93,5 +93,14 @@ def ext_command(command: str):
         print(f"Exit Code: {result.returncode}")
     except subprocess.CalledProcessError as e:
         return str(f"An error occurred {e}")
-ext_command("dir")
+# ext_command("deactivate")
 
+"""
+46. File Path and Name Finder
+Write a Python program to retrieve the path and name of the file currently being executed.
+"""
+def path_name_finder():
+    import os
+    file_path = os.path.realpath(__file__)
+    print(f"File Path: {file_path}")
+path_name_finder()
