@@ -104,3 +104,13 @@ def path_name_finder():
     file_path = os.path.realpath(__file__)
     print(f"File Path: {file_path}")
 path_name_finder()
+
+"""
+7. CPU Count Finder
+Write a Python program to find out the number of CPUs used.
+"""
+def cpu_counter():
+    import os
+    cpu_count = os.cpu_count()
+    print(f"Number of CPU's used = {cpu_count}")
+cpu_counter()
