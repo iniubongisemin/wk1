@@ -103,14 +103,41 @@ def path_name_finder():
     import os
     file_path = os.path.realpath(__file__)
     print(f"File Path: {file_path}")
-path_name_finder()
+# path_name_finder()
 
 """
-7. CPU Count Finder
+47. CPU Count Finder
 Write a Python program to find out the number of CPUs used.
 """
 def cpu_counter():
     import os
     cpu_count = os.cpu_count()
     print(f"Number of CPU's used = {cpu_count}")
-cpu_counter()
+# cpu_counter()
+
+"""
+49. Directory Files Lister
+Write a Python program to list all files in a directory.
+"""
+def directory_files_lister(directory):
+    import os
+    directories = os.listdir(directory)
+    print(directories)
+# directory_files_lister(r"C:\Users\eugen\OneDrive\Documents\backend\wk1")
+
+"""
+50. Print Without Newline
+Write a Python program to print without a newline or space.
+"""
+def print_without_newline():
+    print("hello", end="")
+    print("world", end="")
+# print_without_newline()
+
+def print_to_stderr():
+    import sys
+    import logging
+
+    print("This is an error message!", sys.stderr)
+print_to_stderr()
+
