@@ -139,5 +139,18 @@ def print_to_stderr():
     import logging
 
     print("This is an error message!", sys.stderr)
-print_to_stderr()
+# print_to_stderr()
 
+"""
+51. Find Local IPs
+Write a Python program to find local IP addresses using Python's stdlib.
+"""
+def local_ips():
+    import socket
+    local_ip_addr = set()
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    ip_address = s.getsockname()[0]
+    local_ip_addr.add(ip_address)
+    print(local_ip_addr)
+local_ips()
