@@ -153,4 +153,17 @@ def local_ips():
     ip_address = s.getsockname()[0]
     local_ip_addr.add(ip_address)
     print(local_ip_addr)
-local_ips()
+# local_ips()
+
+"""
+52. Print to STDERR
+Write a Python program to print to STDERR.
+"""
+def print_to_stderr():
+    import sys
+
+    print("This message goes to STDOUT (standard output)")
+    sys.stderr.write("Method 1: Using sys.stderr.write() - Error message")
+print_to_stderr()
+
+
