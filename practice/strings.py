@@ -161,7 +161,7 @@ lifeQuote = "With {}, nothing shall be {}!".format("God", "Impossible")
 #20. isspace() - returns True if all characters in the string are whitespaces
 
 
-#21. istite() - returns True if the string follows the rules of a title
+#21. istitle() - returns True if the string follows the rules of a title
 
 
 #22. join() - converts the elements of an iterable into a string 

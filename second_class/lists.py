@@ -1,12 +1,12 @@
 # lists: they're used to store multiple items in a single variable 
 # create a list
 thisList = [ 'apple', 'banana', 'cherry' ]
-# print(thisList)
+print(thisList)
 
 # NB: list items are indexed, ordered, changeable, and allow duplicate values
 
 # list length
-# print(len(thisList))
+print(len(thisList))
 
 # list items - data types 
 # list items can be of any data type
@@ -19,14 +19,14 @@ list3 = [ True, False, True ]
 # the list() constructor
 # it is possible to use the list constructor when creating a new list
 newList = list(('pineapple', 'avocado', 'grape')) # take note of the double round brackets!
-# print(newList)
+print(newList)
 
 myName = ['iniubong', 'isemin', 'enyinna']
-# print(myName[0])
+print(myName[0])
 
 # range of indices
 cars = ['ferrari', 'mustang', 'porshe', 'lamborghini', 'bugatti', 'viper']
-# print(cars[2:4])
+print(cars[2:4])
 
 # print(cars[:4])
 # print(cars[4:])
@@ -209,7 +209,7 @@ newList = [ x.upper() for x in fruitList ]
 newList = ['hello' for x in fruitList]
 # print(newList)
 
-# NB: the expression can also contain conditions, not like a filter, but as a wau to maniputlate the outcome;
+# NB: the expression can also contain conditions, not like a filter, but as a way to maniputlate the outcome;
 # e.g program to return an item if it is not x, if it is x, it should return y
 newList = [ x if x != "banana" else "orange" for x in fruitList]
 # print(newList)

@@ -20,7 +20,7 @@ thisSet = { 'apple', 'banana', 'cherry', False, True, 0, 1 }
 
 # getting the length of a set
 # to determine how many items a set has, use the len() function 
-# print(len(thisSet))
+print(len(thisSet))
 
 # NB: set items can be of any data type
 # e.g
@@ -47,7 +47,7 @@ thisSet = set(('apple', 'banana', 'cherry')) # take note of the double round-bra
 # e.g loop through the set and print the values
 for x in thisSet:
     pass
-    # print(x)
+    print(x)
 
 # e.g function to check if "banana" is present in the set;
 # print('banana' in thisSet)
