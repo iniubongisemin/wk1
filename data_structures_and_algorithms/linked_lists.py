@@ -1,0 +1,121 @@
+class Node:
+
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
+class LinkedList:
+
+    def __init__(self):
+        self.head = None
+        self.size = 0
+
+    def __repr__(self): # dunder method for traversing the linkedlist and printing the values
+        if self.head is None:
+            return "[]"
+        else:
+            last = self.head
+
+            return []
+    
+    # O(n) - linear time
+    def __contains__(self, value):
+        last = self.head
+        while last is not None:
+            if last.value == value:
+                return True
+            last = last.next
+        return False
+
+    # O(n) - linear time
+    def __len__(self):
+        last = self.head
+        count = 0
+        while last is not None:
+            counter += 1
+            last = last.next
+        return count
+    
+    # O(n) - Linear Time
+    def append(self, value): 
+        if self.head is None:
+            self.head = Node(value)
+        else:
+            last = self.head
+            while last.next: # While the last element has a next element
+                last = last.next
+            last.next = Node(value)
+            self.size += 1
+
+    #O(1) - Constant Time
+    def prepend(self, value): # Create a new node, make the new node point to the head, make the node the new head
+        first_node = Node(value) # Create a node 
+        first_node.next = self.head # Make it point to the head
+        self.head = first_node # Make it the head
+
+    def insert(self, value, index):
+        if index == 0:
+            self.prepend(value)
+            self.size += 1
+        else:
+            if self.head is None:
+                raise ValueError("Index out of bounds")
+            last = self.head
+
+            for i in range(index-1):
+                if last.next is None:
+                    raise ValueError("Index out of bounds")
+                last = last.next
+            
+            new_node = Node(value)
+            new_node.next = last.next
+            last.next = new_node
+            self.size += 1
+
+    def delete(self, value):
+        last = self.head
+
+        if last is not None:
+            if last.value == value:
+                self.head = last.next
+            else:
+                while last.next:
+                    if last.next.value == value:
+                        last.next = last.next.next
+                        break
+
+    # O(n) - linear time
+    def pop(self, index):   
+        if self.head is None:
+            raise ValueError("Index out of bounds")
+        else:
+            last = self.head
+
+            for i in range(index-1):
+                if last.next is None:
+                    raise ValueError("Index out of bounds")
+                last = last.next
+            
+            if last.next is None:
+                raise ValueError("Index out of bounds")
+            else:
+                last.next = last.next.next
+
+
+    # O(n) - linear time
+    def get(self, index):
+        if self.head is None:
+            raise ValueError("Index out of bounds")
+        else:
+            last = self.head
+            for i in range(index):
+                if last.next is None:
+                    raise ValueError("Index out of bounds")
+                last = last.next
+            return last.value
+
+if __name__ == "__main__":
+    pass
+
+
