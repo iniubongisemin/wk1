@@ -17,7 +17,20 @@ class LinkedList:
         else:
             last = self.head
 
-            return []
+            return_string =  f"[{last.value}]"
+
+            while last.next:
+                last = last.next
+                return_string += f", {last.value}"
+            return_string += "]"
+    
+    def __str__(self):
+        current = self.head
+        elements = []
+        while current:
+            elements.append(str(current.value))
+            current = current.next
+        return " -> ".join(elements)
     
     # O(n) - linear time
     def __contains__(self, value):
@@ -109,6 +122,7 @@ class LinkedList:
             raise ValueError("Index out of bounds")
         else:
             last = self.head
+
             for i in range(index):
                 if last.next is None:
                     raise ValueError("Index out of bounds")
@@ -116,6 +130,17 @@ class LinkedList:
             return last.value
 
 if __name__ == "__main__":
-    pass
+    ll = LinkedList()
+
+    ll.append(10)
+    ll.append(5)
+    ll.append(18)
+    ll.append(22)
+    ll.append(29)
+
+    ll.prepend(100)
+
+    print(str(ll))
+
 
 
