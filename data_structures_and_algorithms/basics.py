@@ -4,14 +4,14 @@ result = ""
 for char in chars:
     result += char
 
-print(result) 
+# print(result) 
 
 "O(n)"
 result = []
 for char in chars:
     result.append(char)
 
-print("".join(result))
+# print("".join(result))
 # words = ["l", "e", "a", "r", "n", "i", "n", "g"]
 # print("".join(words))
 
@@ -21,7 +21,7 @@ seen = set(nums)
 print(3 in seen)
 
 """WHEN TO USE A SET INSTEAD OF A LIST"""
-"1. Uniqueness matters"
+"1. When uniqueness matters"
 "2. Checking for Existence"
 "3. Fast membership checks"
 "4. Sliding window"
@@ -31,15 +31,16 @@ print(3 in seen)
 "https://chatgpt.com/s/t_69133ad921388191888a07f877948ca6"
 
 def fibonacci_algorithm():
-    a = 0
-    b = 1
-    fib_list = [0]
+    fib_list = []
+    a = b = 0
     while len(fib_list) < 21:
         fib_num = a + b
         fib_list.append(fib_num)
+        if len(fib_list) == 1:
+            b += 1
         a = b
         b = fib_num
-    print(fib_list)
+    print("FIBONACCI SEQUENCE: ", fib_list)
 fibonacci_algorithm()
 
 """
@@ -55,5 +56,5 @@ JIT Learning for DSA
 
 Additionally 
 9. Union Find
-10. Tries
+10. Trees
 """
