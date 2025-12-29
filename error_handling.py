@@ -153,3 +153,36 @@ try:
     result = calculate_square_root(-4)
 except AssertionError as e:
     print(f"Assertion failed: {e}")
+
+"EXCEPTION SIGNALLING"
+"The raise statement is also useful when you create your own custom exceptions, as you can use it to throw an exception with a custom message. "
+
+"E.g"
+class InvalidCredentialsError(Exception):
+    def __init__(self, message="Invalid username or password!"):
+        self.message = message
+        super().__init__(self.message)
+
+def login(username, password):
+    stored_username = "admin"
+    stored_password = "password"
+
+    if username != stored_username or password != stored_password:
+        raise InvalidCredentialsError()
+    
+    return f"Welcome, {username}"
+
+# Failed login attempt
+try:
+    message = login("user", "wrongpassword")
+    print(message)
+except InvalidCredentialsError as e:
+    print(f"Login failed: {e}")
+
+# Successful Login Attempt
+try:
+    message = login("admin", "password")
+    print(message)
+except InvalidCredentialsError as e:
+    print(f"Login failed: {e}")
+    

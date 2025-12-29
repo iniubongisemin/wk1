@@ -256,3 +256,45 @@ print("\nFinal attributes remaining: ")
 for attr in dir(session):
     if not attr.startswith("__") and not callable(getattr(session, attr)):
         print(f" - {attr}: {getattr(session, attr)}")
+
+
+# PLANET CLASS PROJECT
+class Planet:
+    def __init__(self, name, planet_type, star):
+        self.name = name
+        self.planet_type = planet_type
+        self.star = star
+
+        if type(self.name) != str:
+            raise TypeError("name, planet type, and star must be strings")
+        elif type(self.planet_type) != str:
+            raise TypeError("name, planet type, and star must be strings")
+        elif type(self.star) != str:
+            raise TypeError("name, planet type, and star must be strings")
+
+        if not self.name:
+            raise ValueError("name, planet_type, and star must be non-empty strings")
+        elif not self.planet_type:
+            raise ValueError("name, planet_type, and star must be non-empty strings")
+        elif not self.star:
+            raise ValueError("name, planet_type, and star must be non-empty strings")
+
+    def orbit(self):
+        return f"{self.name} is orbiting around {self.star}..."
+
+    def __str__(self):
+        return f"Planet: {self.name} | Type: {self.planet_type} | Star: {self.star}"
+
+planet_1 = Planet("Argo", "Andromeda", "K-9")
+planet_2 = Planet("Uranus", "Solar", "Nebula")
+planet_3 = Planet("Mercury", "Solar", "Sun")
+
+print(planet_1)
+print(planet_2)
+print(planet_3)
+
+print(planet_1.orbit())    
+print(planet_2.orbit())
+print(planet_3.orbit())
+
+"NOTE: Instance attributes belong to a specific object; class attributes belong to a class."
