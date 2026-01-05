@@ -269,8 +269,189 @@ class Dog(Animal):
     bark = "Woof! Woof!! Woof!!!"
 
     def sound(self):
-        dunder = super().sound()
-        return f"{dunder}, then {self.name} barks {self.bark}"
+        base = super().sound()
+        return f"{base}, then {self.name} barks {self.bark}"
 
 tramp = Dog("Tramp")
 print(tramp.sound())
+
+"NB:  base is the result of calling the sound() method from the Animal class"
+
+"MULTIPLE INHERITANCE"
+# SYNTAX
+class Parent:
+    # Attributes and methods for Parent
+    pass
+
+class Child:
+    # Attributes and methods for Child
+    pass
+
+class GrandChild(Parent, Child):
+    # GrandChild inherits from both Parent and Child
+    # GrandChild can combine or override behavior from each
+    pass
+
+"E.g"
+class Walker:
+    def walk(self):
+        return "I can walk on land"
+    
+class Swimmer:
+    def swim(self):
+        return "I can swim in water"
+    
+class Amphibian(Walker, Swimmer):
+    def __init__(self, name):
+        self.name = name
+
+    def introduce(self):
+        return f"I'm {self.name} the frog. {self.walk()} and also, {self.swim()}."
+    
+frog = Amphibian("Freddy")
+print(frog.introduce())
+
+
+"#3. POLYMORPHISM"
+"Polymorphism allows methods in different classes to share the same name but perform different tasks. You call the same method name on different objects, and each responds in its own way."
+
+# SYNTAX
+class A:
+    def action(self): ...
+
+class B:
+    def action(self): ...
+
+class C:
+    def action(self): ...
+
+"Class().method()" # Works for A, B, or C
+
+"E.g"
+class Cat:
+    def speak(self):
+        return "A cat meows"
+    
+class Bird:
+    def speak(self):
+        return "A bird tweets"
+    
+class Monkey:
+    def speak(self):
+        return "A monkey ooh oooh ooh aah ooh ooh ooh aah"
+    
+def animal_sound(animal):
+    print(animal.speak())
+
+animal_sound(Cat())
+animal_sound(Bird())
+animal_sound(Monkey())
+
+"E.g 2"
+class Twitter:
+    def __init__(self, content):
+        self.content = content
+
+    def post(self):
+        return f"🐦 Tweet: '{self.content}' (280 chars max)"
+    
+class Instagram:
+    def __init__(self, content):
+        self.content = content
+
+    def post(self):
+        return f"📸 Instagram Post: '{self.content}' + ✨ filters"
+    
+class LinkedIn:
+    def __init__(self, content):
+        self.content = content
+
+    def post(self):
+        return f"💼 LinkedIn Article: '{self.content}' (Professional Mode)"
+    
+def start(social_media):
+    print(social_media.post()) # Calls .post() on any object
+
+# Instances
+tweet = Twitter("Revising Python polymorphism 😃!")
+photo = Instagram("Sunset vibes 🌅")
+article = LinkedIn("Why OOP matters in 2025")
+
+start(tweet)
+start(photo)
+start(article)
+
+"INHERITANCE-BASED POLYMORPHISM"
+"In inheritance-based polymorphism, a parent class defines a method, and multiple child classes override that method in their own way. You can then call the same method on any child object, and it behaves differently depending on which child class it is."
+
+"E.g"
+class Animal:
+    def speak(self):
+        return "Some generic sound"
+    
+class Cat(Animal):
+    def speak(self):
+        return "A cat meows"
+    
+class Dog(Animal):
+    def speak(self):
+        return "A dog barks woof woof"
+    
+class Monkey(Animal):
+    def speak(self):
+        return "A monkey ooh ooh aah aah ooh ooh aah aah"
+    
+# print(Cat().speak())
+# print(Dog().speak())
+# print(Monkey().speak())
+# print(Animal().speak())
+
+# Using a list:
+animals = [Cat(), Dog(), Monkey()]
+
+for animal in animals:
+    print(animal.speak())
+
+
+"NAME MANGLING"
+"Prefixing an attribute with a double underscore triggers Python's name mangling process, in which Python internally renames the attribute by adding an underscore and the class name as a prefix, turning __attribute into _ClassName__attribute"
+class Example:
+    def __init__(self, internal, private):
+        self._internal = internal
+        self.__private = private
+
+example_one = Example(
+    "I can be accessed from outside the class, but should not",
+    "I cannot be accessed directly from outside the class"
+)
+example_two = Example(
+    'I should not be accessed from outside the class',
+    'But I can be accessed from outside the class with name mangling'
+)
+"PS: You can still access private attribute like this"
+print(example_one.__dict__)
+print(example_two.__dict__)
+print(example_one._Example__private)
+print(example_two._Example__private)
+
+"WHY PYTHON DOES NAME MANGLING"
+"The main purpose of name mangling is to prevent accidental attribute and method overriding when you use inheritance."
+
+class Parent:
+    def __init__(self):
+        self.__data = "Parent data"
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        self.__data = "Child data"
+
+c = Child()
+print(c.__dict__)
+
+"RULE OF THUMB FOR USING UNDERSCORES"
+"""
+1. If an attribute is only meant for internal use within the class, stick with a single underscore.
+
+2. But if you're working with a class that will be inherited, you should use a double underscore so the attribute from the parent doesn't get overridden.
+"""
