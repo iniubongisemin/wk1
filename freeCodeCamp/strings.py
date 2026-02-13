@@ -106,5 +106,45 @@ print(my_str[::-2])
 "STRING METHODS"
 "upper()"
 upper_case_str = my_str.upper()
+lower_case_str = my_str.lower()
+my_str = "****Hello World!****"
+stripped_str = my_str.strip("*") # Returns a new string with the specified leading and trailing characters removed. If no argument is passed it removes leading and trailing whitespace.
+replaced_str = my_str.replace("Hello", "Hi")
+"SYNTAX: replace(old, new)"
+split_str = my_str.split("*")
+"SYNTAX: split(separator)"
+
+my_list = ["Hello", "World!"]
+joined_str = " ".join(my_list)
+"SYNTAX: join(iterable)"
+my_str = "*Hello World!#"
+strt_str = my_str.startswith("*")
+"SYNTAX: startswith(prefix)"
+end_str = my_str.endswith("World!#")
+"SYNTAX: endswith(suffix)"
+find_str = my_str.find("world")  
+"SYNTAX: find(substring): Returns the index of the first occurrence of substring, or -1 if it doesn't find one."
+cnt_str = my_str.count("l")
+my_str = "hello world"
+title_str = my_str.title()
+
+"""
+OTHER METHODS:
+capitalize()
+isupper()
+islower()
+"""
+print(my_str)
 print(upper_case_str)
+print(lower_case_str)
+print(stripped_str)
+print(replaced_str)
+print(split_str)
+print(split_str[4])
+print(joined_str)
+print(strt_str)
+print(end_str)
+print(find_str)
+print(cnt_str)
+print(title_str)
 
