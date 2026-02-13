@@ -1,4 +1,4 @@
-name = "Ini-ubong"
+name = "Ini"
 print(name, type(name))
 
 is_founder = True
