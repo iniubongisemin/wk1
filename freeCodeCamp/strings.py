@@ -17,7 +17,7 @@ quote = 'She said, "Hello World!"'
 msg = 'It\'s a sunny day'
 quote = "She said, \"Hello!\""
 
-"IN OPERATOR" # >> Returns a boolean
+"'in' OPERATOR" # >> Returns a boolean
 my_str = 'Hello world'
 
 print("Hello" in my_str)
