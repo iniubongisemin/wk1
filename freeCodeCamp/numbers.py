@@ -50,6 +50,57 @@ result_2 = pow(2,3, 5)
 print(result_1)
 print(result_2)
 
+"AUGMENTED ASSIGNMENTS"
+"""
+Augmented assignment combines a binary operation with an assignment in one step. It takes a variable, applies an operation to it with another value, and stores the result back into the same variable.
+"""
+"SYNTAX: variable = variable <operator> value"
 
+my_var = 10
+my_var += 5
 
+print(my_var)
 
+"NB: Every operator can use an augmented assignment."
+
+"Subtraction Assignment Operator"
+count = 14
+count -= 3
+print(count)
+
+"Multiplication Assignment Operator"
+product = 12
+product *= 3
+print(product)
+
+"Multiplication Assignment Operator"
+price = 100
+price /= 4
+print(price)
+
+"Floor Division Assignment Operator"
+total_pages = 23
+total_pages //= 5
+print(total_pages)
+
+"Modulus Assignment Operator"
+bits = 35
+bits %= 8
+print(bits)
+
+"Exponentiation Assignment Operator"
+power = 2
+power **= 4
+print(power)
+
+"Using With Strings"
+greet = "Hello"
+greet += " World!"
+print(greet)
+
+"USING TO REPEAT A STRING"
+greeting = "Hello!"
+greeting *= 3
+print(greeting)
+
+"NB: Other augmented assignments throw a TypeError when you use them with strings"
