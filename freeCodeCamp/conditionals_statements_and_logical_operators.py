@@ -81,4 +81,24 @@ is_student = True
 print(age or is_employed)
 
 if age < 18 or is_student:
-    pass
+    print("You are eligible for a student discount")
+else:
+    print("You are eligible for a student discount")
+
+"NOT"
+"Takes a single operand and inverts its boolean value i.e converts 'truthy' values to False and 'falsy' values to True"
+"PS: 'not' always returns 'True' or 'False'"
+
+print(not '') # True, because empty strings are falsy
+print(not "Hello") # False, because non-empty string
+print(not 0) # True, because 0 is falsy
+print(not 1) # False, because 1 is truthy
+print(not False) # True, because False is falsy
+print(not True) # False, because True is truthy
+
+is_admin = False
+
+if not is_admin:
+    print("Access denied for non-administrators")
+else:
+    print("Welcome, Administrator!")
