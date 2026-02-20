@@ -148,3 +148,12 @@ print(find_str)
 print(cnt_str)
 print(title_str)
 
+"STRING SLICING"
+"SYNTAX: string[start:stop]"
+"""
+start is the index where the slice begins (inclusive).
+stop is the index where the slice ends (exclusive).
+"""
+
+employee_code = "DEV-2026-JD-001"
+print(employee_code[0:3])
