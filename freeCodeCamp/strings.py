@@ -157,3 +157,4 @@ stop is the index where the slice ends (exclusive).
 
 employee_code = "DEV-2026-JD-001"
 print(employee_code[0:3])
+
