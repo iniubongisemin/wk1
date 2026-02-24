@@ -104,7 +104,7 @@ else:
     print("Welcome, Administrator!")
 
 "ORDER OF LOGICAL OPS"
-"""When multiple logical operators are used in an if statement, conditions joined with 'and' are evaluated before conditions joined with or. Parentheses () are used in Python to group conditions and control the order in which they are evaluated."""
+"""When multiple logical operators are used in an if statement, conditions joined with 'and' are evaluated before conditions joined with 'or'. Parentheses () are used in Python to group conditions and control the order in which they are evaluated."""
 
 "NESTED IFs"
 "#WORKSHOP"
@@ -156,3 +156,30 @@ if age >= 21 or age >= 18 and (show_time != 'Evening' or is_member):
     print('Final price of ticket:', final_price)
 else:
     print('Ticket booking failed due to restrictions')
+
+"#LAB"
+distance_mi = 7
+is_raining = True
+has_bike = True
+has_car = True
+has_ride_share_app = True
+
+if distance_mi < 5:
+    print()
+elif distance_mi >= 5:
+    print()
+else:
+    print()
+
+if not distance_mi:
+    print(False)
+
+if distance_mi <= 1 and not is_raining:
+    print(True)
+elif (distance_mi > 1 and distance_mi <= 6) and has_bike and not is_raining:
+    print(True)
+elif distance_mi > 6 and (has_car or has_ride_share_app):
+    print(True)
+else:
+    print(False)
+
