@@ -190,3 +190,36 @@ decrypted_text = decrypt(encrypted_text, 13)
 print(decrypted_text)
 
 
+"RPG CHARACTER TASK"
+
+full_dot = '●'
+empty_dot = '○'
+
+def create_character(name, strength, intelligence, charisma):
+    if not isinstance(name, str):
+        return "The character name should be a string"
+    elif not name:
+        return "The character should have a name"
+    elif len(name) > 10:
+        return "The character name is too long"
+    elif " " in name:
+        return "The character name should not contain spaces"
+    elif not isinstance(strength, int) or not isinstance(intelligence, int) or not isinstance(charisma, int):
+        return "All stats should be integers"
+    elif strength < 1 or intelligence < 1 or charisma < 1:
+        return "All stats should be no less than 1"
+    elif strength > 4 or intelligence > 4 or charisma >  4:
+        return "All stats should be no more than 4"
+    elif (strength + intelligence + charisma) != 7:
+        return "The character should start with 7 points"
+    else:
+        str_num = 10 - strength
+        int_num = 10 - intelligence
+        cha_num = 10 - charisma
+        return f"{name}\nSTR {full_dot*strength}{empty_dot * str_num}\nINT {full_dot*intelligence}{empty_dot * int_num}\nCHA {full_dot*charisma}{empty_dot * cha_num}"
+
+stats = create_character('ren', 4, 2, 1)
+
+print(stats)
+
+
