@@ -158,3 +158,11 @@ stop is the index where the slice ends (exclusive).
 employee_code = "DEV-2026-JD-001"
 print(employee_code[0:3])
 
+"MAKETRANS STRING METHOD"
+"SYNTAX: str.maketrans(arg1, arg2)"
+lower_chars = "abc"
+upper_chars = "ABC"
+
+table = str.maketrans(lower_chars, upper_chars)
+print(table)
+"PS: This happens because the translation table does not include uppercase letters."
