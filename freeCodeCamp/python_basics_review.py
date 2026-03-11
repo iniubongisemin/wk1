@@ -229,5 +229,64 @@ print(power)
 "BITWISE OPERATORS"
 "&=, ^=, >>=, and <<="
 
+"TRUTHY & FALSY VALUES"
+"⦿ None"
+"⦿ False"
+"⦿ Integer: 0"
+"⦿ Float: 0.0"
+"⦿ Empty Strings: ''"
+"NB: Other values like non-zero numbers, and non-empty strings are truthy."
+
+"WORKING WITH THE bool() FUNCTION"
+"It explicitly converts a value to its boolean equivalent and returns True for truthy values and False for falsy values"
+print(bool(False))
+print(bool(0))
+print(bool(''))
+
+print(bool(True))
+print(bool(1))
+print(bool("Hello"))
+
+"BOOLEAN OPERATORS & SHORT-CIRCUITING"
+"These are special operators that allow you to combine multiple expressions to create more complex decision-making logic in your code"
+"and, or & not"
+"AND OPERATOR: This operator takes two operands and returns the first operand if it is falsy, else it returns the second operand"
+"PS: Both operands must be truthy for an expression to result in a truthy value"
+
+is_citizen = True
+age = 25
+print(is_citizen and age)
+
+if is_citizen and age >= 18:
+    print("You are eligible to vote!")
+else:
+    print("You are not eligible to vote!")
+
+"OR OPERATOR: This operator returns the first operand if it is truthy, else, it returns the second operand"
+"PS: An 'or' expression results in a truthy value if at least one operand is truthy"
+
+age = 19
+is_employed = False
+print(age or is_employed)
+
+is_student = True
+if age < 18 or is_student:
+    print("You are eligible for a student discount")
+else:
+    print("You are not eligible for a student discount")
+
+"SHORT-CIRCUITING: The 'and' & 'or' operators are known as a short-circuit operators"
+"Short-circuiting means Python checks values from left to right and stops as soon as it determines the final result"
+
+"NOT OPERATOR"
+"This operator takes a single operand and inverts its boolean value. It converts truthy values to False and falsy values to True"
+"PS: Unlike the previous operators we looked at, not always returns True or False"
+
+print(not '')
+print(not "Hello")
+print(not 0)
+print(not 1)
+print(not False)
+print(not True)
 
 
