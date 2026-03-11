@@ -153,9 +153,81 @@ result = 'abcabc'.translate(trans_table)
 print(result)  # 123123
 
 "NUMBERS"
-"Modulus Operator"
+"Modulo Operator (%): This returns the remainder when a number is divided by another number"
+int_1 = 56
+int_2 = 12
+print(int_1 % int_2)
 
+"FLOOR DIVISION (//): This operator is used to divide two numbers and round down the result to the"
+int_1 = 56
+int_2 = 12
+print(int_1 // int_2)
 
+"EXPONENTIATION OPERATOR (**): This operator is used to raise a number to the power of another"
+int_1 = 4
+int_2 = 2
+print(int_1 ** int_2)
+
+"ROUND FUNCTION round(): This is used to round a number to the nearest whole integer"
+num_1 = 3.4
+num_2 = 7.7
+print(round(num_1))
+print(round(num_2))
+
+"ABS FUNCTION abs(): This is used to return the absolute value of a number"
+num = -13
+print(abs(num))
+
+"BIN FUNCTION bin(): This is used to convert an integer to its binary representation as a string"
+num = 56
+print(bin(num))
+
+"OCT FUNCTION oct(): This is used to convert an integer to its octal representation as a string"
+num = 56
+print(oct(num))
+
+"HEX FUNCTION hex(): This is used to convert an integer to its hexadecimal representation as a string"
+num = 56
+print(hex(num))
+
+"POW FUNCTION"
+result = pow(2,3)
+print(result)
+
+"AUGMENTED ASSIGNMENTS"
+"Augmented assignment combines a binary operation with an assignment in one step. It takes a variable, applies an operation to it with another value, and stores the result back into the same variable"
+"Addition Assignment"
+my_var = 10
+my_var += 5
+print(my_var) 
+
+"Subtraction Assignment"
+count = 14
+count -= 3
+print(count)
+
+"Multiplication Assignment"
+product = 65
+product *= 7
+print(product)
+
+"Division Assignment"
+price = 100
+price /= 4
+print(price)
+
+"Floor Division Assigment"
+total_pages = 23
+total_pages //= 5
+print(total_pages)
+
+"Exponentiation Assignment"
+power = 2
+power **= 3
+print(power)
+
+"BITWISE OPERATORS"
+"&=, ^=, >>=, and <<="
 
 
 
