@@ -289,4 +289,6 @@ print(not 1)
 print(not False)
 print(not True)
 
+test_str = "ROBOT"
+print(test_str.find("O"))
 
