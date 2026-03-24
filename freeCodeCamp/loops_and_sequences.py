@@ -107,4 +107,125 @@ print(programming_languages.index("Java"))
 
 
 
+"TUPLES"
+"Tuples are similar to lists, but while lists are a mutable data type, tuples are immutable. This means that the elements in a tuple cannot be changed once it's created"
+
+"⦿ To access an element from a tuple, you can use bracket notation and the index number"
+developer = ("Inie", 28, "Django Developer")
+print(developer[0])
+
+"⦿ Tuples also support negative indexing"
+numbers = (1, 2, 3, 4, 5)
+print(numbers[-2])
+
+"⦿ Another way to create a tuple is by using the tuple() constructor"
+# developer = "Ini-ubong"
+# print(tuple(developer))
+
+"⦿ IN keyword"
+print("Inie" in developer)
+
+"UNPACKING A TUPLE"
+name, age, job = developer
+print(name)
+print(age)
+print(job)
+
+"⦿ If you need to collect any remaining elements from a tuple, you can use the asterisk (*) operator"
+name, *rest = developer
+print(name)
+print(rest)
+
+"SLICING A TUPLE"
+desserts = ('cake', 'pie', 'cookies', 'ice cream')
+print(desserts[1:3])
+
+"PS: 'del' keyword does not work with Tuples!"
+
+"NB: If you are working with data that requires modification, use a LIST. If you are working with fixed data that doesn't require modification, use TUPLES"
+
+"COUNT"
+programming_languages = ('Rust', 'Java', 'Python', 'C++', 'Rust')
+print(programming_languages.count("Rust"))
+
+"INDEX"
+print(programming_languages.index("Rust"))
+"NB: You can specify where to start searching for the string by passing in the start index"
+print(programming_languages.index("Python", 1))
+
+"NB: You can also pass in an additional stop index"
+programming_languages = ('Rust', 'Java', 'C++', 'Rust', 'Python', 'JavaScript', 'Python')
+print(programming_languages.index("Python", 2, 7))
+
+"SORTED"
+numbers = (13, 2, 78, 3, 45, 67, 18, 7)
+print(sorted(numbers))
+"NOTE: The sorted() function will always create a new list of the sorted values. This differs from the sort() method which sorts the elements of a list in place and does not return a new list"
+"If you need to customize the sorting behavior for an iterable, you can use the optional reverse and key arguments"
+
+"e.g"
+print(sorted(programming_languages, key=len)) # NB: The len function checks the length of each string in the list
+
+"NB: If you want to create a new list of values in reverse order, you can use the reverse argument like this"
+print(sorted(programming_languages, reverse=True))
+
+
+
+"LOOPS"
+"FOR LOOPS"
+for language in programming_languages:
+    print(language)
+
+for char in "code":
+    print(char)
+
+"NESTED 'for' LOOPS"
+categories = ['Fruit', 'Vegetable']
+foods = ['Apple', 'Carrot', 'Banana']
+
+for category in categories:
+    for food in foods:
+        print(category, food)
+
+"WHILE LOOPS"
+"NB: This type of loop will repeat a block of code until the condition is False"
+"e.g"
+secret_number = 3
+guess = 0
+
+while guess != secret_number:
+    guess = int(input("Guess the magic number (1-5): "))
+    if guess != secret_number:
+        print("Wrong guess! Try again")
+
+print("Hurray!!!! You got it")
+
+"BREAK: The break statement is used to stop the execution of a loop"
+developer_names = ['Jess', 'Naomi', 'Inie', 'Tom']
+for developer in developer_names:
+    if developer == "Inie":
+        break
+    print(developer)
+
+"CONTINUE: The continue statement is used to skip the current iteration of a loop and move onto the next iteration"
+for developer in developer_names:
+    if developer == "Inie":
+        continue
+    print(developer)
+
+"NB: Both for and while loops can be combined with an else clause, which is executed only when the loop is not terminated by a break statement"
+"e.g"
+words = ['sky', 'apple', 'rhythm', 'fly', 'orange']
+
+for word in words:
+    for letter in word:
+        if letter.lower() in "aeiou":
+            print(f"'{word}' contains the vowel '{letter}'")
+            break
+    else:
+        print(f"'{word}' has no vowels")
+
+"RANGE"
+
+
 
