@@ -225,7 +225,75 @@ for word in words:
     else:
         print(f"'{word}' has no vowels")
 
+
+
 "RANGE"
+"The range() function is used to generate a sequence of integers"
+"SYNTAX: range(start, stop, step)"
+
+"e.g"
+for num in range(3):
+    print(num)
+"NB: If a start argument is not specified, then the default is 0"
+
+for num in range(1, 5):
+    print(num)
+
+"NB: By default the sequence of integers will increment by 1. But if you want to change that default, then you can use the optional step argument"
+for num in range(2, 11, 2):
+    print(num)
+
+"NB: The range() function only accepts integers as arguments, not floats"
+
+"DECREMENTING ORDER"
+for num in range(50, 0, -10):
+    print(num)
+
+"LIST CONSTRUCTOR"
+numbers = list(range(2, 11, 2))
+print(numbers)
+
+
+
+"ENUMERATE & ZIP FUNCTIONS"
+"e.g Keeping track of the index of each element"
+"Conventional Method"
+languages = ['Spanish', 'English', 'Russian', 'Chinese']
+index = 0
+
+for lang in languages:
+    print(f"Index {index} and language {lang}")
+    index += 1
+
+"USING ENUMERATE"
+"The enumerate() function keeps track of the index for an iterable and returns an enumerate object"
+print(list(enumerate(languages))) # [(0, 'Spanish'), (1, 'English'), (2, 'Russian'), (3, 'Chinese')]
+
+"Refactoring the Conventional Method"
+for index, language in enumerate(languages):
+    print(f"Index {index} and language {language}")
+
+"PS: The enumerate() function also accepts an optional start argument that specifies the starting value for the count"
+"e.g"
+for index, language in enumerate(languages, 1):
+    print(f"Index {index} and language {language}")
+
+"ZIP"
+"Used when you need to iterate over multiple iterables in parallel"
+developers = ['Naomi', 'Dario', 'Jessica', 'Tom']
+ids = [1, 2, 3, 4]
+
+print(list(zip(developers, ids)))
+
+"Zip in a for loop"
+for name, id in zip(developers, ids):
+    print(f"Name: {name}")
+    print(f"ID: {id}")
+
+
+
+
+
 
 
 
