@@ -20,7 +20,6 @@ print("Integer Floor Division: ", floor_div_ints)
 print("Float Floor Division: ")
 
 "EXPONENTIATION"
-
 exp_ints = my_int_1 ** my_int_2
 exp_floats = my_float_1 ** my_float_2
 

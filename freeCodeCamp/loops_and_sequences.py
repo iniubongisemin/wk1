@@ -291,9 +291,49 @@ for name, id in zip(developers, ids):
     print(f"ID: {id}")
 
 
+"LIST COMPREHENSION"
+"e.g Without List Comprehension"
+even_numbers = []
 
+for num in range(21):
+    if num % 2 == 0:
+        even_numbers.append(num)
 
+print(even_numbers)
 
+"e.g With List Comprehension"
+even_numberz = [num for num in range(21) if num % 2 == 0]
+print("EVEN_NUMBERZ: ", even_numberz)
 
+"Ex2"
+numbers = [1, 2, 3, 4, 5]
+result = [(num, "Even") if num % 2 == 0 else (num, "Odd") for num in numbers]
+print(result)
 
+"FILTER FUNCTION: Used to select elements from an iterable that meet a specific condition"
+"SYNTAX: filter(func, iterable)"
+"Ex3: Creating a list using filter()"
+words = ["tree", "sky", "mountain", "river", "cloud", "sun"]
+def is_long_word(word):
+    return len(word) > 4
+
+long_words = list(filter(is_long_word, words))
+print(long_words)
+
+"MAP: Takes an iterable and applies a function to each of its elements"
+"Ex4"
+celsius = [0, 10, 20, 30, 40]
+
+def to_fahrenheit(temp):
+    return (temp * 9/5) + 32
+
+fahrenheit = list(map(to_fahrenheit, celsius))
+print(fahrenheit)
+
+"SUM"
+total = sum(celsius)
+print("TOTAL", total)
+"NB: You can also pass in an optional start argument which sets the initial value for the summation"
+total = sum(celsius, 20)
+print("TOT: ", total)
 
