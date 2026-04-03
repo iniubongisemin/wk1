@@ -337,3 +337,36 @@ print("TOTAL", total)
 total = sum(celsius, 20)
 print("TOT: ", total)
 
+
+"LAMBDA FUNCTIONS"
+"When it comes to working with high order functions like map() and filter(), you can use an anonymous inline function. This is where lambda functions come in"
+"E.g"
+
+def square(num):
+    return num ** 2
+
+print(square(8))
+
+"USING LAMBDA FUNCTION"
+lambda num: num ** 2
+
+"NB: lambda functions are anonymous, so this function no longer has the name square associated with it"
+"Lambda functions are great when you need to use them in higher order functions like so"
+
+numbers = [1, 2, 3, 4, 5]
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers) 
+
+"NOTE: When working with lambda functions it is important to be aware of best practices. For example, it is not a good practice to assign a lambda function to a variable as it defeats the purpose"
+"e.g"
+squared = lambda x: x ** 2 # ❌❌
+squared_numbers = list(map(squared, numbers)) # ❌❌❌❌ >> Use a regular function instead
+print("SQUARED_NUMBERS>>>>", squared_numbers) 
+
+"NOTE: Avoid writing unneccessarily complicated lambda functions like so:"
+result = (lambda x: (x**2 + 2*x - 1) if x > 0 else (x**3 - x + 4))(3)
+print("RESULT>>>>>>", result)
+
+
+
