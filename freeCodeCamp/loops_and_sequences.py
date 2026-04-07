@@ -368,5 +368,25 @@ print("SQUARED_NUMBERS>>>>", squared_numbers)
 result = (lambda x: (x**2 + 2*x - 1) if x > 0 else (x**3 - x + 4))(3)
 print("RESULT>>>>>>", result)
 
+"#1 PIN EXTRACTOR"
+
+def pin_extractor(poem):
+    secret_code = ''
+    lines = poem.split('\n')
+    for line_index, line in enumerate(lines):
+        print(line_index, line)
+        words = line.split()
+
+        print(str(len(words[line_index])))
+        secret_code += str(len(words[line_index]))
+
+    return secret_code
+
+poem = """Stars and the moon
+shine in the sky
+white and bright
+until the end of the night"""
+
+pin_extractor(poem)
 
 
