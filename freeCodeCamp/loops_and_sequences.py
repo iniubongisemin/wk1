@@ -106,7 +106,6 @@ print(numbers)
 print(programming_languages.index("Java"))
 
 
-
 "TUPLES"
 "Tuples are similar to lists, but while lists are a mutable data type, tuples are immutable. This means that the elements in a tuple cannot be changed once it's created"
 
@@ -414,3 +413,22 @@ poem3 = 'There\nonce\nwas\na\ndragon'
 
 print(pin_extractor([poem, poem2, poem3]))
 
+"NUMBER PATTERN GENERATOR"
+def number_pattern(n):
+    if not isinstance(n, int):
+        return "Argument must be an integer value."
+    elif n < 1:
+        return "Argument must be an integer greater than 0."
+
+    numbers = range(1, n+1)
+    number_list = ""
+
+    for i in numbers:
+        number_list += str(i)
+        number_list += " "
+        
+    print(number_list)
+    number_list.rstrip()
+    return number_list
+
+print(number_pattern(8))
